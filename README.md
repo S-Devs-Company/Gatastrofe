@@ -1,2 +1,2 @@
 # Gatastrofe
-Repositorio para el desarrollo del juego para el proyecto final de estructura de datos I
+Repositorio para el desarrollo de los juego para el proyecto final de estructura de datos I
