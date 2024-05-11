@@ -451,7 +451,7 @@
 											"top": 650,
 											"width": 239.1005859375,
 											"height": 13,
-											"text": "-incongnita: int",
+											"text": "-incognita: int",
 											"horizontalAlignment": 0
 										}
 									],
@@ -570,7 +570,7 @@
 											"top": 748,
 											"width": 239.1005859375,
 											"height": 13,
-											"text": "+getIncongnita(): int",
+											"text": "+getIncognita(): int",
 											"horizontalAlignment": 0
 										},
 										{
@@ -2612,7 +2612,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGPaOkX4Bf57/o="
 							},
-							"name": "incongnita",
+							"name": "incognita",
 							"visibility": "private",
 							"type": "int"
 						}
@@ -2719,7 +2719,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGPaOkX4Bf57/o="
 							},
-							"name": "getIncongnita",
+							"name": "getIncognita",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
