@@ -18,8 +18,8 @@ public class Tablero : MonoBehaviour
     {
         for (int i = 1; i <= 4; i++)
         {
-            Vector3 pos = new(593,(i-1)*(100),990);
-            Quaternion rot = new();
+            Vector3 pos = new Vector3(0,(i-1)*(-125) + 80,1000);
+            Quaternion rot = new Quaternion();
             ecuaciones.AgregarElemento(Instantiate(ecuacionObject,pos,rot,gameObject.transform));
 
             GetEcuacion(i).GenerarEcuacion();
