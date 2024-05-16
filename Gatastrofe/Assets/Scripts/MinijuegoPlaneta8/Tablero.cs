@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class Tablero : MonoBehaviour
 {
+    public Ecuacion ecuacion1;
+    public Ecuacion ecuacion2;
+    public Ecuacion ecuacion3;
+    public Ecuacion ecuacion4;
+
     public ListaDobleEnlazada ecuaciones;
-    public Ecuacion ecuacionObject;
 
 
 
@@ -14,14 +18,29 @@ public class Tablero : MonoBehaviour
         ecuaciones = new ListaDobleEnlazada();
     }
 
+    // Start is called before the first frame update
+    void Start()
+    {
+        GenerarTablero();
+        //ecuacionObject.GenerarEcuacion();
+        //ecuacionObject.MostrarEcuacion();
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
     public void GenerarTablero()
     {
+        ecuaciones.AgregarElemento(ecuacion1);
+        ecuaciones.AgregarElemento(ecuacion2);
+        ecuaciones.AgregarElemento(ecuacion3);
+        ecuaciones.AgregarElemento(ecuacion4);
         for (int i = 1; i <= 4; i++)
         {
-            Vector3 pos = new Vector3(0,(i-1)*(-125) + 80,1000);
-            Quaternion rot = new Quaternion();
-            ecuaciones.AgregarElemento(Instantiate(ecuacionObject,pos,rot,gameObject.transform));
-
             GetEcuacion(i).GenerarEcuacion();
             GetEcuacion(i).MostrarEcuacion();
         }
@@ -58,20 +77,5 @@ public class Tablero : MonoBehaviour
             }
         }
         return false;
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        GenerarTablero();
-        //ecuacionObject.GenerarEcuacion();
-        //ecuacionObject.MostrarEcuacion();
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
