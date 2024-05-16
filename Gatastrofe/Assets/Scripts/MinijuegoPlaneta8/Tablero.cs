@@ -22,8 +22,6 @@ public class Tablero : MonoBehaviour
     void Start()
     {
         GenerarTablero();
-        //ecuacionObject.GenerarEcuacion();
-        //ecuacionObject.MostrarEcuacion();
         
     }
 

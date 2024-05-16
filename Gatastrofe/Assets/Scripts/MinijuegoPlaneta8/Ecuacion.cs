@@ -48,9 +48,11 @@ public class Ecuacion : MonoBehaviour
     public string GenerarEcuacion()
     {
         System.Random rand = new System.Random();
+        //define num1 y num2
         numero1 = rand.Next(1, 11);
         numero2 = rand.Next(1, 11);
 
+        //define la operación
         switch (rand.Next(1, 5))
         {
             case 1:
@@ -70,6 +72,7 @@ public class Ecuacion : MonoBehaviour
                 break;
         }
 
+        //resuleve la operación
         switch (operacion)
         {
             case '+':
@@ -117,6 +120,7 @@ public class Ecuacion : MonoBehaviour
                 break;
         }
 
+        //Crea la incognita
         incognita = rand.Next(1, 5);
         switch (incognita)
         {
