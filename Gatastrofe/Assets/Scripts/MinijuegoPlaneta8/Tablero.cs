@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Tablero : MonoBehaviour
@@ -8,6 +10,7 @@ public class Tablero : MonoBehaviour
     public Ecuacion ecuacion2;
     public Ecuacion ecuacion3;
     public Ecuacion ecuacion4;
+    public Teclado teclado;
 
     public ListaDobleEnlazada ecuaciones;
 
@@ -22,6 +25,7 @@ public class Tablero : MonoBehaviour
     void Start()
     {
         GenerarTablero();
+        GenerarTeclado();
         
     }
 
@@ -76,4 +80,32 @@ public class Tablero : MonoBehaviour
         }
         return false;
     }
+
+    public void GenerarTeclado()
+    {
+        List<string> textoTeclado = new List<string>();
+        HashSet<string> opcionesTeclado = new HashSet<string>();
+        List<char> posiblesOpciones = new List<char> { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '+', '-', '*', '/' };
+        List<string> incognitas = new List<string>();
+        for (int i = 1; i <= 4; i++)
+        {
+            incognitas.Add(GetEcuacion(i).GetValorIncongnita());
+        }
+        foreach (string valor in incognitas)
+        {
+            opcionesTeclado.Add(valor);
+        }
+
+        System.Random random = new System.Random();
+
+        while (opcionesTeclado.Count < 10)
+        {
+            char opcionAleatoria = posiblesOpciones[random.Next(posiblesOpciones.Count)];
+            opcionesTeclado.Add(Convert.ToString(opcionAleatoria));
+        }
+        textoTeclado = opcionesTeclado.ToList();
+        textoTeclado = textoTeclado.OrderBy(item => random.Next()).ToList();
+        teclado.GenerarTeclado(textoTeclado);
+    }
+    
 }

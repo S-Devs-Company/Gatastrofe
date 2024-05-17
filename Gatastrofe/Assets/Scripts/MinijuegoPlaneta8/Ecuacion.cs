@@ -142,6 +142,24 @@ public class Ecuacion : MonoBehaviour
         return incognita;
     }
 
+    public string GetValorIncongnita()
+    {
+        switch (incognita)
+        {
+            case 1: 
+                return Convert.ToString(numero1);
+            case 2: 
+                return Convert.ToString(operacion);
+            case 3: 
+                return Convert.ToString(numero2);
+            case 4:
+                return Convert.ToString(resultado);
+            default:
+                throw new ArgumentOutOfRangeException();
+
+        }
+    }
+
     public bool Resolver(string valorIncognita)
     {
         switch (incognita)
