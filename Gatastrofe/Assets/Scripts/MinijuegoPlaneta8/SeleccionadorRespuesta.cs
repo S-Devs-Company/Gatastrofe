@@ -15,7 +15,7 @@ public class SeleccionadorRespuesta : MonoBehaviour
 
         }
         SeleccionadorRespuesta.incognita = gameObject.GetComponentInChildren<TextMeshProUGUI>();
-        incognita.GetComponentInParent<Image>().color = Color.green;
+        incognita.GetComponentInParent<Image>().color = Color.cyan;
         Debug.Log(incognita.text);   
     }
 

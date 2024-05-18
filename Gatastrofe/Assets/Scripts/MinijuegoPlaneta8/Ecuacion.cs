@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -147,11 +145,11 @@ public class Ecuacion : MonoBehaviour
     {
         switch (incognita)
         {
-            case 1: 
+            case 1:
                 return Convert.ToString(numero1);
-            case 2: 
+            case 2:
                 return Convert.ToString(operacion);
-            case 3: 
+            case 3:
                 return Convert.ToString(numero2);
             case 4:
                 return Convert.ToString(resultado);
@@ -161,67 +159,98 @@ public class Ecuacion : MonoBehaviour
         }
     }
 
-    public bool Resolver(string valorIncognita)
+    public bool Resolver()
     {
-        switch (incognita)
+        try
         {
-            case 1:
-                switch (operacion)
-                {
-                    case '+':
-                        return int.Parse(valorIncognita) + numero2 == resultado;
-                    case '-':
-                        return int.Parse(valorIncognita) - numero2 == resultado;
+            switch (incognita)
+            {
+                case 1:
+                    switch (operacion)
+                    {
+                        case '+':
+                            return int.Parse(num1.GetParsedText()) + numero2 == resultado;
+                        case '-':
+                            return int.Parse(num1.GetParsedText()) - numero2 == resultado;
 
-                    case '*':
-                        return int.Parse(valorIncognita) * numero2 == resultado;
-                    case '/':
-                        return int.Parse(valorIncognita) / numero2 == resultado;
-                    default:
-                        Console.WriteLine("WTF");
-                        break;
-                }
-                break;
-            case 2:
-                switch (valorIncognita[0])
-                {
-                    case '+':
-                        return (numero1 + numero2) == resultado;
-                    case '-':
-                        return (numero1 - numero2) == resultado;
+                        case '*':
+                            return int.Parse(num1.GetParsedText()) * numero2 == resultado;
+                        case '/':
+                            return int.Parse(num1.GetParsedText()) / numero2 == resultado;
+                        default:
+                            Console.WriteLine("WTF");
+                            break;
+                    }
+                    break;
+                case 2:
+                    switch (operador.GetParsedText()[0])
+                    {
+                        case '+':
+                            return (numero1 + numero2) == resultado;
+                        case '-':
+                            return (numero1 - numero2) == resultado;
 
-                    case '*':
-                        return (numero1 * numero2) == resultado;
-                    case '/':
-                        return (numero1 / numero2) == resultado;
-                    default:
-                        Console.WriteLine("WTF");
-                        break;
-                }
-                break;
-            case 3:
-                switch (operacion)
-                {
-                    case '+':
-                        return numero1 + int.Parse(valorIncognita) == resultado;
-                    case '-':
-                        return numero1 - int.Parse(valorIncognita) == resultado;
+                        case '*':
+                            return (numero1 * numero2) == resultado;
+                        case '/':
+                            return (numero1 / numero2) == resultado;
+                        default:
+                            Console.WriteLine("WTF");
+                            break;
+                    }
+                    break;
+                case 3:
+                    switch (operacion)
+                    {
+                        case '+':
+                            return numero1 + int.Parse(num2.GetParsedText()) == resultado;
+                        case '-':
+                            return numero1 - int.Parse(num2.GetParsedText()) == resultado;
 
-                    case '*':
-                        return numero1 * int.Parse(valorIncognita) == resultado;
-                    case '/':
-                        return numero1 / int.Parse(valorIncognita) == resultado;
-                    default:
-                        Console.WriteLine("WTF");
-                        break;
-                }
-                break;
-            case 4:
-                return resultado == double.Parse(valorIncognita);
-            default:
-                throw new ArgumentOutOfRangeException();
+                        case '*':
+                            return numero1 * int.Parse(num2.GetParsedText()) == resultado;
+                        case '/':
+                            return numero1 / int.Parse(num2.GetParsedText()) == resultado;
+                        default:
+                            Console.WriteLine("WTF");
+                            break;
+                    }
+                    break;
+                case 4:
+                    return resultado == double.Parse(res.GetParsedText());
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+            return false;
+
         }
-        return false;
+        catch (Exception ex)
+        {
+            return false;
+
+        }
+    }
+
+    public void PintarEcuacion()
+    {
+        if (Resolver())
+        {
+            num1.GetComponentInParent<Image>().color = Color.green;
+            num1.GetComponentInParent<Button>().interactable = false;
+            num2.GetComponentInParent<Image>().color = Color.green;
+            num2.GetComponentInParent<Button>().interactable = false;
+            operador.GetComponentInParent<Image>().color = Color.green;
+            operador.GetComponentInParent<Button>().interactable = false;
+            res.GetComponentInParent<Image>().color = Color.green;
+            res.GetComponentInParent<Button>().interactable = false;
+        }
+        else
+        {
+            num1.GetComponentInParent<Image>().color = Color.red;
+            num2.GetComponentInParent<Image>().color = Color.red;
+            operador.GetComponentInParent<Image>().color = Color.red;
+            res.GetComponentInParent<Image>().color = Color.red;
+        }
     }
 
     public string[] MostrarEcuacion()
@@ -265,7 +294,7 @@ public class Ecuacion : MonoBehaviour
                 operador.text = operacion.ToString();
                 operador.GetComponentInParent<Button>().interactable = false;
                 res.text = resultado.ToString();
-                res.GetComponentInParent<Button>().interactable= false;
+                res.GetComponentInParent<Button>().interactable = false;
                 ecuacion[0] = numero1.ToString();
                 ecuacion[1] = operacion.ToString();
                 ecuacion[2] = "?";
