@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Ecuacion : MonoBehaviour
 {
@@ -231,8 +232,12 @@ public class Ecuacion : MonoBehaviour
             case 1:
                 num1.text = "?";
                 num2.text = numero2.ToString();
+                num2.GetComponentInParent<Button>().interactable = false;
                 operador.text = operacion.ToString();
+                operador.GetComponentInParent<Button>().interactable = false;
                 res.text = resultado.ToString();
+                res.GetComponentInParent<Button>().interactable = false;
+
 
                 ecuacion[0] = "?";
                 ecuacion[1] = operacion.ToString();
@@ -241,9 +246,13 @@ public class Ecuacion : MonoBehaviour
                 break;
             case 2:
                 num1.text = numero1.ToString();
+                num1.GetComponentInParent<Button>().interactable = false;
                 num2.text = numero2.ToString();
+                num2.GetComponentInParent<Button>().interactable = false;
                 operador.text = "?";
                 res.text = resultado.ToString();
+                res.GetComponentInParent<Button>().interactable = false;
+
                 ecuacion[0] = numero1.ToString();
                 ecuacion[1] = "?";
                 ecuacion[2] = numero2.ToString();
@@ -251,9 +260,12 @@ public class Ecuacion : MonoBehaviour
                 break;
             case 3:
                 num1.text = numero1.ToString();
+                num1.GetComponentInParent<Button>().interactable = false;
                 num2.text = "?";
                 operador.text = operacion.ToString();
+                operador.GetComponentInParent<Button>().interactable = false;
                 res.text = resultado.ToString();
+                res.GetComponentInParent<Button>().interactable= false;
                 ecuacion[0] = numero1.ToString();
                 ecuacion[1] = operacion.ToString();
                 ecuacion[2] = "?";
@@ -261,8 +273,11 @@ public class Ecuacion : MonoBehaviour
                 break;
             case 4:
                 num1.text = numero1.ToString();
+                num1.GetComponentInParent<Button>().interactable = false;
                 num2.text = numero2.ToString();
+                num2.GetComponentInParent<Button>().interactable = false;
                 operador.text = operacion.ToString();
+                operador.GetComponentInParent<Button>().interactable = false;
                 res.text = "?";
                 ecuacion[0] = numero1.ToString();
                 ecuacion[1] = operacion.ToString();
