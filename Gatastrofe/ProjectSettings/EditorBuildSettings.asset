@@ -12,19 +12,16 @@ EditorBuildSettings:
     path: Assets/Scenes/1. PantallaDeInicio.unity
     guid: 4fa36141796c4344b98773138e62462c
   - enabled: 1
-    path: Assets/Scenes/2.1. InteriorCasaProtaJugable.unity
-    guid: 913ddbc5de3a2a448abc0af1b18c2a9b
-  - enabled: 1
-    path: Assets/Scenes/2.2. PlanetaTierraJugable.unity
+    path: Assets/Scenes/2.1. PlanetaTierraJugable.unity
     guid: 1988175ec0c2a034b965a4483c7eeca7
   - enabled: 1
-    path: Assets/Scenes/2.3. BasureroJugable.unity
+    path: Assets/Scenes/2.2. BasureroJugable.unity
     guid: 7703cd5641a6dca41884ea0c89e545a6
   - enabled: 1
-    path: Assets/Scenes/2.4. CinematicaConstruccionCohete.unity
+    path: Assets/Scenes/2.3. CinematicaConstruccionCohete.unity
     guid: daaac30322dc1ea4d8ba2603fae64640
   - enabled: 1
-    path: Assets/Scenes/2.5 CinematicaDeViaje.unity
+    path: Assets/Scenes/2.4 CinematicaDeViaje.unity
     guid: a67d1bb0c82e7324a9f677e13a5de961
   - enabled: 1
     path: Assets/Scenes/3.1. CinematicaPlaneta8.unity
