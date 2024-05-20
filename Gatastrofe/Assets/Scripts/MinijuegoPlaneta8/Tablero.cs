@@ -63,15 +63,15 @@ public class Tablero : MonoBehaviour
         return tablero;
     }
 
-    public bool ResolverTablero(string incognita1, string incognita2, string incognita3, string incognita4)
+    public bool ResolverTablero()
     {
-        if (GetEcuacion(1).Resolver(incognita1))
+        if (GetEcuacion(1).Resolver())
         {
-            if (GetEcuacion(2).Resolver(incognita2))
+            if (GetEcuacion(2).Resolver())
             {
-                if (GetEcuacion(3).Resolver(incognita3))
+                if (GetEcuacion(3).Resolver())
                 {
-                    if (GetEcuacion(4).Resolver(incognita4))
+                    if (GetEcuacion(4).Resolver())
                     {
                         return true;
                     }
@@ -79,6 +79,14 @@ public class Tablero : MonoBehaviour
             }
         }
         return false;
+    }
+
+    public void PintarTablero()
+    {
+        for (int i = 1; i <= 4; i++)
+        {
+            GetEcuacion(i).PintarEcuacion();
+        }
     }
 
     public void GenerarTeclado()
