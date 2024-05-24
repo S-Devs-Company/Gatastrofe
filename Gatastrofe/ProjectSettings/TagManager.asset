@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Terreno
   - Estructura
+  - Pick
   layers:
   - Default
   - TransparentFX

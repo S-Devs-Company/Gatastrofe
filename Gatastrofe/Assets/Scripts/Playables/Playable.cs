@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class Playable : MonoBehaviour
@@ -10,7 +11,7 @@ public class Playable : MonoBehaviour
     public GameObject camara;
     public Animator animator;
     private Rigidbody rigidBody;
-    
+
     //Atributos de estado
     public static float velocidad = 5;
     public static Boolean isStuck = false;
@@ -96,5 +97,19 @@ public class Playable : MonoBehaviour
         }
 
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (Input.GetKey(KeyCode.E) && other.CompareTag("Pick"))
+        {
+            animator.SetBool("isPicking", true);
+            animator.SetBool("isPicking", false);
+        }
+        else if (Input.GetKey(KeyCode.E) && other.CompareTag("Dialog"))
+        {
+            //Accion de dialogo
+        }
+    }
+
 
 }
