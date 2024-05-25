@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneManagerScript : MonoBehaviour
 {
-    int CurrentScene = 0;
+    static int CurrentScene = 0;
     public Animator CinematicaContexto;
     float contador = 0;
 
