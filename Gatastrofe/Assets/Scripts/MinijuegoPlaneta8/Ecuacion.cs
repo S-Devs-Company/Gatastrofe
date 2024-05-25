@@ -224,7 +224,7 @@ public class Ecuacion : MonoBehaviour
             return false;
 
         }
-        catch (Exception ex)
+        catch (Exception)
         {
             return false;
 

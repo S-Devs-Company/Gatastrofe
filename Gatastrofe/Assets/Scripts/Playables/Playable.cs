@@ -1,5 +1,4 @@
 using System;
-using UnityEditor;
 using UnityEngine;
 
 public class Playable : MonoBehaviour
@@ -8,6 +7,7 @@ public class Playable : MonoBehaviour
     public GameObject prota;
     public GameObject camara;
     public Animator animator;
+    BoxCollider boxCollider;
 
     //Atributos de estado
     public static float velocidad = 5;
@@ -18,6 +18,8 @@ public class Playable : MonoBehaviour
     void Start()
     {
         animator = GetComponentInChildren<Animator>();
+        boxCollider = prota.GetComponent<BoxCollider>();
+        Physics.IgnoreCollision(gameObject.GetComponent<BoxCollider>(), boxCollider);
     }
 
     // Update is called once per frame
@@ -94,7 +96,8 @@ public class Playable : MonoBehaviour
         {
             animator.SetBool("isWalking", false);
         }
-        camara.transform.position = new Vector3(prota.transform.position.x, camara.transform.position.y, prota.transform.position.z - 5);
+        prota.transform.localPosition = new Vector3(0,1,0);
+        
     }
 
     public void Interact()
