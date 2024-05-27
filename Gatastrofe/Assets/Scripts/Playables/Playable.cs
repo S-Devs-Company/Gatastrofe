@@ -13,6 +13,7 @@ public class Playable : MonoBehaviour
     public static float velocidad = 5;
     public Boolean canPick = false;
     private Boolean canDialog = false;
+    public static Boolean canPlay = false;
 
     // Start is called before the first frame update
     void Start()
@@ -25,9 +26,11 @@ public class Playable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
-        Interact();
-
+        if (canPlay)
+        {
+            Move();
+            Interact();
+        }
     }
 
     public void Move()

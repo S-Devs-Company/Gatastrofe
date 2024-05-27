@@ -2,12 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneManagerScript : MonoBehaviour
 {
-    static int CurrentScene = 0;
+    public static int CurrentScene = 0;
     public Animator CinematicaContexto;
     float contador = 0;
 
@@ -16,34 +17,43 @@ public class SceneManagerScript : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        if (CurrentScene == 0)
+        if (CurrentScene == SceneManager.GetSceneByName("Scenes/0. CinematicaDeContexto").buildIndex)
         {
             float AnimDuration = CinematicaContexto.GetCurrentAnimatorStateInfo(0).length;
             contador += Time.deltaTime;
-            if (CurrentScene == 0 && contador >= AnimDuration)
+            if (contador >= AnimDuration || Input.GetKeyDown(KeyCode.Q))
             {
-                nextScene();
+                CargarEscena("Scenes/1. PantallaDeInicio");
             }
         }
-
-        if (Input.GetKeyDown("space"))
+        else if (CurrentScene == SceneManager.GetSceneByName("Scenes/2.1. PlanetaTierraPrimeraVez").buildIndex)
         {
-            nextScene();
+            if (!EventManager.ValidarEvento("INI-21-00"))
+            {
+                CargarEscena("Scenes/2.3. PlanetaTierraJugable");
+            }
+        }
+        else if (CurrentScene == SceneManager.GetSceneByName("Scenes/2.2. BasureroJugable").buildIndex)
+        {
+
+        }
+        else if (CurrentScene == SceneManager.GetSceneByName("Scenes/2.3. PlanetaTierraJugable").buildIndex)
+        {
+
         }
     }
 
-    public void nextScene()
+    public void CargarEscena(String escena)
     {
-        CurrentScene += 1;
-        SceneManager.LoadScene(CurrentScene);
+        SceneManager.LoadScene(escena);
+        CurrentScene = SceneManager.GetActiveScene().buildIndex;
+    }
+
+    public void CargarEscena(int escena)
+    {
+        SceneManager.LoadScene(escena);
+        CurrentScene = SceneManager.GetActiveScene().buildIndex;
     }
 }
