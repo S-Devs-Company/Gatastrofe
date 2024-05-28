@@ -5,8 +5,8 @@ public class PlayerHistoriaPrimeraVez : MonoBehaviour
 {
     Animator animator;
 
-    Boolean primerDialogo = false;
-    Boolean segundoDialogo = false;
+    private static Boolean primerDialogo = false;
+    private static Boolean segundoDialogo = false;
     public static Boolean imDone = false; //Si ya cumplió el evento del basurero
 
     // Start is called before the first frame update
@@ -36,10 +36,18 @@ public class PlayerHistoriaPrimeraVez : MonoBehaviour
             else
             {
                 animator.SetBool("isWalking", false);
+                /*
+                 * 
+                 * 
+                 * Se ejecuta el primer dialogo
+                 * 
+                 * 
+                 * 
+                 */
             }
         }
         //Si ya el prota hizo su dialogo con el cientifico
-        else if (primerDialogo)
+        else if (primerDialogo && !imDone && !segundoDialogo)
         {
             //Se rota hacia el basurero y camina
             GameObject.Find("prota").transform.rotation = Quaternion.Euler(0f, 96.82f, 0f);
@@ -51,28 +59,48 @@ public class PlayerHistoriaPrimeraVez : MonoBehaviour
             else
             {
                 animator.SetBool("isWalking", false);
+                //Se cambia el estado del evento de primera parte de tutorial
+                //SceneManagerScript.CargarEscena("Scenes/2.2. BasureroJugable");
             }
 
         }
-        else if (imDone)
+        else if (imDone && primerDialogo && !segundoDialogo)
         {
             //Camina hacia el cientifico
-            //tiene su ultimo dialogo con el cientifico
-            //se cambia a las escena de planeta tierra libre
+            GameObject.Find("prota").transform.rotation = Quaternion.Euler(0f, -77.9f, 0f);
+            if (gameObject.transform.position.z < 1)
+            {
+                animator.SetBool("isWalking", true);
+                gameObject.transform.Translate(new Vector3(-0.977f, 0, 0.21f) * Playable.velocidad * Time.deltaTime);
+            }
+            else
+            {
+                animator.SetBool("isWalking", false);
+                /*
+                 * 
+                 * 
+                 * Se ejecuta el segundo dialogo
+                 * 
+                 * 
+                 */
+            }
         }
-        else if (segundoDialogo)
+        else if (segundoDialogo && imDone && primerDialogo)
         {
-            //Cambio del estado del evento de historia primera vez
-            //Cambio a la escena del modo libre
+            //Fin de la historia de tutorial
+            //Desvanecido de la camara
+            Playable.canPlay = true;
+            SceneManagerScript.CargarEscena("Scenes/2.3. PlanetaTierraJugable");
         }
 
         //Inputs que simulan los dialogos
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             primerDialogo = true;
         }
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.R))
         {
+            //Cuando ya se terminó la escena de la basura
             imDone = true;
         }
         if (Input.GetKeyDown(KeyCode.T))

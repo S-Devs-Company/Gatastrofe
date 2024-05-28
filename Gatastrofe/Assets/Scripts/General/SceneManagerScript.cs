@@ -28,7 +28,7 @@ public class SceneManagerScript : MonoBehaviour
                 CargarEscena("Scenes/1. PantallaDeInicio");
             }
         }
-        else if (CurrentScene == SceneManager.GetSceneByName("Scenes/2.1. PlanetaTierraPrimeraVez").buildIndex)
+        else if (CurrentScene == SceneManager.GetSceneByName("Scenes/2.1. PlanetaTierraTutorial").buildIndex)
         {
             if (!EventManager.ValidarEvento("INI-21-00"))
             {
@@ -45,13 +45,13 @@ public class SceneManagerScript : MonoBehaviour
         }
     }
 
-    public void CargarEscena(String escena)
+    public static void CargarEscena(String escena)
     {
         SceneManager.LoadScene(escena);
         CurrentScene = SceneManager.GetActiveScene().buildIndex;
     }
 
-    public void CargarEscena(int escena)
+    public static void CargarEscena(int escena)
     {
         SceneManager.LoadScene(escena);
         CurrentScene = SceneManager.GetActiveScene().buildIndex;
