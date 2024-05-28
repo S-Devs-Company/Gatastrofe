@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -48,12 +47,12 @@ public class SceneManagerScript : MonoBehaviour
     public static void CargarEscena(String escena)
     {
         SceneManager.LoadScene(escena);
-        CurrentScene = SceneManager.GetActiveScene().buildIndex;
+        CurrentScene = SceneManager.GetSceneByName(escena).buildIndex;
     }
 
     public static void CargarEscena(int escena)
     {
         SceneManager.LoadScene(escena);
-        CurrentScene = SceneManager.GetActiveScene().buildIndex;
+        CurrentScene = escena;
     }
 }

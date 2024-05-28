@@ -13,85 +13,17 @@ public class PlayerHistoriaPrimeraVez : MonoBehaviour
     void Start()
     {
         animator = GetComponentInChildren<Animator>();
+        if (!EventManager.ValidarEvento("INI-22-00"))
+        {
+            transform.position = new Vector3(9f, 0f, -0.5f);
+            imDone = true;
+            primerDialogo = true;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Si el porta no ha hecho su dialogo con el cientifico y el mejor amigo no ha terminado
-        if (!primerDialogo && !MejorAmigoPrimeraVez.imDone)
-        {
-            animator.SetBool("isWalking", false);
-        }
-        //Si el portagonista no ha hecho su dialogo con el cientifico y ya el mejor amigo terminó
-        else if (!primerDialogo && MejorAmigoPrimeraVez.imDone)
-        {
-            //Se rota hacia el cientifico y camina
-            GameObject.Find("prota").transform.rotation = Quaternion.Euler(0f, 26.1f, 0f);
-            if (gameObject.transform.position.z < 0f)
-            {
-                animator.SetBool("isWalking", true);
-                gameObject.transform.Translate(new Vector3(0.399f,0,0.917f) * Playable.velocidad * Time.deltaTime);
-            }
-            else
-            {
-                animator.SetBool("isWalking", false);
-                /*
-                 * 
-                 * 
-                 * Se ejecuta el primer dialogo
-                 * 
-                 * 
-                 * 
-                 */
-            }
-        }
-        //Si ya el prota hizo su dialogo con el cientifico
-        else if (primerDialogo && !imDone && !segundoDialogo)
-        {
-            //Se rota hacia el basurero y camina
-            GameObject.Find("prota").transform.rotation = Quaternion.Euler(0f, 96.82f, 0f);
-            if (gameObject.transform.position.z > -0.5f)
-            {
-                animator.SetBool("isWalking", true);
-                gameObject.transform.Translate(new Vector3(0.99f, 0, -0.049f) * Playable.velocidad * Time.deltaTime);
-            }
-            else
-            {
-                animator.SetBool("isWalking", false);
-                //Se cambia el estado del evento de primera parte de tutorial
-                //SceneManagerScript.CargarEscena("Scenes/2.2. BasureroJugable");
-            }
-
-        }
-        else if (imDone && primerDialogo && !segundoDialogo)
-        {
-            //Camina hacia el cientifico
-            GameObject.Find("prota").transform.rotation = Quaternion.Euler(0f, -77.9f, 0f);
-            if (gameObject.transform.position.z < 1)
-            {
-                animator.SetBool("isWalking", true);
-                gameObject.transform.Translate(new Vector3(-0.977f, 0, 0.21f) * Playable.velocidad * Time.deltaTime);
-            }
-            else
-            {
-                animator.SetBool("isWalking", false);
-                /*
-                 * 
-                 * 
-                 * Se ejecuta el segundo dialogo
-                 * 
-                 * 
-                 */
-            }
-        }
-        else if (segundoDialogo && imDone && primerDialogo)
-        {
-            //Fin de la historia de tutorial
-            //Desvanecido de la camara
-            Playable.canPlay = true;
-            SceneManagerScript.CargarEscena("Scenes/2.3. PlanetaTierraJugable");
-        }
 
         //Inputs que simulan los dialogos
         if (Input.GetKeyDown(KeyCode.Q))
@@ -108,12 +40,86 @@ public class PlayerHistoriaPrimeraVez : MonoBehaviour
             segundoDialogo = true;
         }
 
-
-        /*
         if (EventManager.ValidarEvento("INI-22-00"))
         {
-            //Aqui va la secuencia del prota en la historia
+            //Si el porta no ha hecho su dialogo con el cientifico y el mejor amigo no ha terminado
+            if (!primerDialogo && !MejorAmigoPrimeraVez.imDone)
+            {
+                animator.SetBool("isWalking", false);
+            }
+            //Si el portagonista no ha hecho su dialogo con el cientifico y ya el mejor amigo terminó
+            else if (!primerDialogo && MejorAmigoPrimeraVez.imDone)
+            {
+                //Se rota hacia el cientifico y camina
+                GameObject.Find("prota").transform.rotation = Quaternion.Euler(0f, 26.1f, 0f);
+                if (gameObject.transform.position.z < 0f)
+                {
+                    animator.SetBool("isWalking", true);
+                    gameObject.transform.Translate(new Vector3(0.399f, 0, 0.917f) * Playable.velocidad * Time.deltaTime);
+                }
+                else
+                {
+                    animator.SetBool("isWalking", false);
+                    /*
+                     * 
+                     * 
+                     * Se ejecuta el primer dialogo
+                     * 
+                     * 
+                     * 
+                     */
+                }
+            }
+            //Si ya el prota hizo su dialogo con el cientifico
+            else if (primerDialogo && !imDone && !segundoDialogo)
+            {
+                //Se rota hacia el basurero y camina
+                GameObject.Find("prota").transform.rotation = Quaternion.Euler(0f, 96.82f, 0f);
+                if (gameObject.transform.position.z > -0.5f)
+                {
+                    animator.SetBool("isWalking", true);
+                    gameObject.transform.Translate(new Vector3(0.99f, 0, -0.049f) * Playable.velocidad * Time.deltaTime);
+                }
+                else
+                {
+                    animator.SetBool("isWalking", false);
+                    SceneManagerScript.CargarEscena("Scenes/2.2. BasureroJugable");
+                    Playable.canPlay = true;
+                }
+
+            }
         }
-        */
+        else
+        {
+            //Si ya terminó el primer dialogo y lo de la basura
+            if (imDone && primerDialogo && !segundoDialogo)
+            {
+                //Camina hacia el cientifico
+                GameObject.Find("prota").transform.rotation = Quaternion.Euler(0f, -77.9f, 0f);
+                if (gameObject.transform.position.z < 1)
+                {
+                    animator.SetBool("isWalking", true);
+                    gameObject.transform.Translate(new Vector3(-0.977f, 0, 0.21f) * Playable.velocidad * Time.deltaTime);
+                }
+                else
+                {
+                    animator.SetBool("isWalking", false);
+                    /*
+                     * 
+                     * 
+                     * Se ejecuta el segundo dialogo
+                     * 
+                     * 
+                     */
+                }
+            }
+            else if (segundoDialogo && imDone && primerDialogo)
+            {
+                EventManager.ModificarEstadoEvento("INI-21-00", 1);
+                //Desvanecido de la camara
+                Playable.canPlay = true;
+                SceneManagerScript.CargarEscena("Scenes/2.3. PlanetaTierraJugable");
+            }
+        }
     }
 }
