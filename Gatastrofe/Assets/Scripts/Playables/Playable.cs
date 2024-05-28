@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Playable : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class Playable : MonoBehaviour
     public static float velocidad = 5;
     public Boolean canPick = false;
     private Boolean canDialog = false;
-    public static Boolean canPlay = false;
+    public static Boolean canPlay = true;
 
     // Start is called before the first frame update
     void Start()
@@ -99,8 +100,8 @@ public class Playable : MonoBehaviour
         {
             animator.SetBool("isWalking", false);
         }
-        prota.transform.localPosition = new Vector3(0,1,0);
-        
+        prota.transform.localPosition = new Vector3(0, 1, 0);
+
     }
 
     public void Interact()
@@ -110,7 +111,8 @@ public class Playable : MonoBehaviour
             animator.SetBool("isPicking", true);
             //agarramelo
 
-        }else if (Input.GetKey(KeyCode.E) && canDialog)
+        }
+        else if (Input.GetKey(KeyCode.E) && canDialog)
         {
             //Habla care tabla
         }
@@ -118,12 +120,13 @@ public class Playable : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        
+
         if (collision.collider.CompareTag("Pick"))
         {
             Debug.Log("Colisiona");
             canPick = true;
-        }else if (collision.collider.CompareTag("Dialog"))
+        }
+        else if (collision.collider.CompareTag("Dialog"))
         {
             canPick = false;
             canDialog = true;

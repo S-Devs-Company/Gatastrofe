@@ -13,6 +13,7 @@ public class MejorAmigoPrimeraVez : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        Playable.canPlay = false;
     }
 
     // Update is called once per frame
