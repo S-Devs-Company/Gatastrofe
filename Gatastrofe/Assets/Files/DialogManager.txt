@@ -1,0 +1,46 @@
+PT-Amigo-01;¿Qué fue eso?
+PT-Prota-01;Unos extraterrestres secuestraron a mi gato
+PT-Amigo-02;¿QUEEEE? ¿Y qué vas a hacer?
+PT-Prota-02;Ni idea la verdad.
+PT-Amigo-03;Mira, cuando despegaron se les cayó este mapa [Le entrega el mapa] ¿Y si le dices al científico loco que te construya una nave? Él vive en la plaza central. Seguro te ayuda.
+PT-Prota-03;Eso haré.
+PT-Prota-04;Hola, disculpe, un extraterrestre acaba de secuestrar a mi gato :C. Mi amigo dice que usted me pude ayudar a construir una nave…
+PT-Cientifico-01;Si, claro, solo necesito que deposites $10M y lo construiré enseguida
+PT-Prota-05; :C
+PT-Cientifico-02;O…Puedes ver qué encuentras en el basurero y con gusto te ayudo.
+PT-Prota-06; c: Vale, enseguida.
+PT-Cientifico-03;¿Ya tienes todo?
+PT-Prota-07;Completo
+PT-Cientifico-04;Listo, mañana mismo está lista tu nave
+PT-NPC-01;Aveces quisiera ser una mariposa y volar hasta el final del Universo
+PT-NPC-02;Espero que recuperes a tu gato, despues de todo un gato es un familiar mas
+PMAT-Mago-01;¿Qué pasó? ¿Estás bien?
+PMAT-Prota-01;Ayuda por favor, unos extraterrestres secuestraron a mi gato y encontré este planeta en su mapa. ¿Sabes algo?
+PMAT-Mago-02;Ah sí. Unos comerciantes aterrizaron ayer. Podrías hablar con nuestro príncipe: Gauss. Seguro él te puede ayudar.
+PMAT-Prota-02;Saludos su majestad Gauss.
+PMAT-Gauss-01;Saludos, forastero.
+PMAT-Prota-03;He venido a solicitar su ayuda. Unos comerciantes secuestraron a mi gato y me informan que han estado por aquí.
+PMAT-Gauss-02;Claro. Ellos estuvieron aquí. Me ofrecieron a su gato, pero soy alérgico y los rechacé. Vi que fueron en dirección al planeta de la física.
+PMAT-Prota-04;Muchas gracias su brillantez. Una última petición: ¿tendrá usted algunas herramientas para reparar mi nave y seguir la búsqueda?
+PMAT-Gauss-05;Si claro, pero para saber si eres digno de mis herramientas primero debes solucionar estos acertijos…
+PMAT-Gauss-06;Veo que si eres digno humano. Toma mis herramientas y ten un buen viaje.
+PMAT-NPC-01;Una vez me mire al espejo y me desmaye, no de miedo, sino de ver tanta belleza
+PMAT-NPC-02;El Principe Gauss podra ser un principe pero siempre sera mi rey
+PFIS-Cilindro-01;Ayuda por favor, viene una lluvia de meteoritos. Debes salvarnos. :0
+PFIS-Prota-01;Disculpen, me informaron que unos comerciantes pasaron por aquí vendiendo un gato. Ese es mi gato, ellos lo secuestraron.
+PFIS-Cilindro-02;Si claro, pero apenas vieron la lluvia de meteoritos se fueron hacia el planeta de la estadística. Perdón por no poder ayudar más. Ten un poco de gasolina y buen viaje.
+PFIS-NPC-01;Nos has salvado, estamos agradecidos
+PFIS-NPC-02;Algun dia me caera una manzana en la cabeza y sere Newton
+PEST-Prota-01;Hola, mi nave está fallando, ¿podrías ayudarme? Debo seguir con la búsqueda de mi gato. Unos comerciantes lo secuestraron.
+PEST-Mecanico-01;Claro que puedo ayudar, pero necesito que tu me ayudes primero. Mi sueño siempre ha sido estar a la moda, pero no tengo idea como. Si me ayudas a descubrirlo, repararé tu nave.
+PEST-Prota-02;Claro, eso haré.
+PEST-Prota-03;Hola, he descubierto cual es la moda: son los __________
+PEST-Mecanico-02;Muchas gracias, tu nave ya está reparada. Mucha suerte en tu búsqueda.
+PEST-NPC-01;Estadisticamente somos ciudadanos del planeta estadistica
+PEST-NPC-02;Tu gato es muy cool, cuando lo vi estaba a la moda
+PGEO-Cubo-01;Acabas de destruir nuestro planeta
+PGEO-Cubo-02;La única forma que salgas de aquí es que reconstruyas todo… O a la cárcel.
+PGEO-Prota-01;No se preocupen, lo reconstruiré.
+PGEO-Cubo-03;Maravilloso. Ahora fuera de nuestro planeta. Toma tu nave y por favor no regreses nunca.
+PGEO-NPC-01;Una vez llego un fulano llamado Steve, confundio el planeta con un lugar extraño llamado Minecraft
+PGEO-NPC-02;La geometria es el estudio de las formas de la belleza del Universo
