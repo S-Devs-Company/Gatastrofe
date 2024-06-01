@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
@@ -5,28 +6,21 @@ using UnityEngine;
 public class EventManager : MonoBehaviour
 {
     private const string ruta = "Assets\\Files\\EventManager.txt";
-    Dictionary<string, int> EventDictionary = new Dictionary<string, int>();
+    private static Dictionary<string, int> EventDictionary = new Dictionary<string, int>();
 
     private void Awake()
     {
         DontDestroyOnLoad(this);
-        LeerArchivo();    
+        LeerArchivo();
     }
 
-    // Start is called before the first frame update
     void Start()
     {
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     //Lee el archivo y lo pega en el diccionario
-    public void LeerArchivo()
+    public static void LeerArchivo()
     {
         using (StreamReader reader = new StreamReader(ruta))
         {
@@ -41,7 +35,7 @@ public class EventManager : MonoBehaviour
     }
 
     //toma el diccionario y lo escribe en el archivo
-    public void EscribirArchivo()
+    public static void EscribirArchivo()
     {
         using (StreamWriter writer = new StreamWriter(ruta))
         {
@@ -53,9 +47,15 @@ public class EventManager : MonoBehaviour
     }
 
     //Modifica el evento en el diccionario y lo escribe en el archivo
-    public void ModificarEstadoEvento(string codigo, int nuevoEstado)
+    public static void ModificarEstadoEvento(string codigo, int nuevoEstado)
     {
-        EventDictionary[codigo] = nuevoEstado; 
+        EventDictionary[codigo] = nuevoEstado;
         EscribirArchivo();
     }
+
+    public static Boolean ValidarEvento(String codigoEvt)
+    {
+        return (EventDictionary[codigoEvt] == 0);
+    }
+
 }

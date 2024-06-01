@@ -8,6 +8,7 @@ TagManager:
   - Estructura
   - Pick
   - Dialog
+  - PuertaBasurero
   layers:
   - Default
   - TransparentFX
