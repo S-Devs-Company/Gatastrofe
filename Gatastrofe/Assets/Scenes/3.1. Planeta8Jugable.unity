@@ -123,6 +123,124 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &34252127
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 34252130}
+  - component: {fileID: 34252129}
+  - component: {fileID: 34252128}
+  m_Layer: 0
+  m_Name: Directional Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &34252128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34252127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+--- !u!108 &34252129
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34252127}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 1
+  m_Shape: 0
+  m_Color: {r: 0.8392157, g: 0.8392157, b: 0.8392157, a: 1}
+  m_Intensity: 0.61
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &34252130
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34252127}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalPosition: {x: -3.0613234, y: -0.43032742, z: 21.044271}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &135146534
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -362,17 +480,17 @@ PrefabInstance:
     - target: {fileID: 2382799219754379413, guid: c52afcf7f74956c4fa0ac14b8bb8058c,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.4056604
+      value: 0.30980393
       objectReference: {fileID: 0}
     - target: {fileID: 2382799219754379413, guid: c52afcf7f74956c4fa0ac14b8bb8058c,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.4056604
+      value: 0.30980393
       objectReference: {fileID: 0}
     - target: {fileID: 2382799219754379413, guid: c52afcf7f74956c4fa0ac14b8bb8058c,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.4056604
+      value: 0.30980393
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -536,11 +654,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC3
       objectReference: {fileID: 0}
+    - target: {fileID: 3152143768620500797, guid: d949fc21b4329ba419d86de222984004,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dialog
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3152143768620500797, guid: d949fc21b4329ba419d86de222984004,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 472405534}
   m_SourcePrefab: {fileID: 100100000, guid: d949fc21b4329ba419d86de222984004, type: 3}
+--- !u!1 &472405533 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3152143768620500797, guid: d949fc21b4329ba419d86de222984004,
+    type: 3}
+  m_PrefabInstance: {fileID: 472405532}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &472405534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472405533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e91b013af767974b8702b74c025440e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogCode: PMAT-NPC-
+  DialoguePanel: {fileID: 663444253}
+  DialogueText: {fileID: 663444252}
+  CantDialog: 2
 --- !u!1 &528815660 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7218274717145686183, guid: c52afcf7f74956c4fa0ac14b8bb8058c,
@@ -631,11 +780,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC2
       objectReference: {fileID: 0}
+    - target: {fileID: 3152143768620500797, guid: d949fc21b4329ba419d86de222984004,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dialog
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3152143768620500797, guid: d949fc21b4329ba419d86de222984004,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 569269688}
   m_SourcePrefab: {fileID: 100100000, guid: d949fc21b4329ba419d86de222984004, type: 3}
+--- !u!1 &569269687 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3152143768620500797, guid: d949fc21b4329ba419d86de222984004,
+    type: 3}
+  m_PrefabInstance: {fileID: 569269686}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &569269688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569269687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e91b013af767974b8702b74c025440e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogCode: PMAT-NPC-
+  DialoguePanel: {fileID: 663444253}
+  DialogueText: {fileID: 663444252}
+  CantDialog: 2
 --- !u!1001 &663444250
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -742,6 +922,24 @@ PrefabInstance:
 --- !u!1 &663444251 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6733888560633192103, guid: 31810e6a96c276145af6ca7e4fe55c01,
+    type: 3}
+  m_PrefabInstance: {fileID: 663444250}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &663444252 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8699345984210248803, guid: 31810e6a96c276145af6ca7e4fe55c01,
+    type: 3}
+  m_PrefabInstance: {fileID: 663444250}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &663444253 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8804112565159187056, guid: 31810e6a96c276145af6ca7e4fe55c01,
     type: 3}
   m_PrefabInstance: {fileID: 663444250}
   m_PrefabAsset: {fileID: 0}
@@ -866,6 +1064,34 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1389142672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1389142668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9897ed9ec809cfe42a34b8380b143978, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogCode: PMAT-32-
+  DialoguePanel: {fileID: 663444253}
+  DialogueText: {fileID: 663444252}
+  CantDialog: 6
+--- !u!114 &1389142673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1389142668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2371857549057114095d2b4c39ec65aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1708257479 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7919685236690557331, guid: c52afcf7f74956c4fa0ac14b8bb8058c,
@@ -956,11 +1182,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC1
       objectReference: {fileID: 0}
+    - target: {fileID: 3152143768620500797, guid: d949fc21b4329ba419d86de222984004,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dialog
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3152143768620500797, guid: d949fc21b4329ba419d86de222984004,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1870304104}
   m_SourcePrefab: {fileID: 100100000, guid: d949fc21b4329ba419d86de222984004, type: 3}
+--- !u!1 &1870304103 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3152143768620500797, guid: d949fc21b4329ba419d86de222984004,
+    type: 3}
+  m_PrefabInstance: {fileID: 1870304102}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1870304104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870304103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e91b013af767974b8702b74c025440e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogCode: PMAT-NPC-
+  DialoguePanel: {fileID: 663444253}
+  DialogueText: {fileID: 663444252}
+  CantDialog: 2
 --- !u!4 &1932383544 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5699927406847071995, guid: 81b26820c4278a04b901961d403c4026,
@@ -1103,11 +1360,58 @@ PrefabInstance:
       propertyPath: m_Name
       value: matemagoHistoria
       objectReference: {fileID: 0}
+    - target: {fileID: 3152143768620500797, guid: d949fc21b4329ba419d86de222984004,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dialog
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3152143768620500797, guid: d949fc21b4329ba419d86de222984004,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2821974240975900800}
+    - targetCorrespondingSourceObject: {fileID: 3152143768620500797, guid: d949fc21b4329ba419d86de222984004,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2821974240975900801}
   m_SourcePrefab: {fileID: 100100000, guid: d949fc21b4329ba419d86de222984004, type: 3}
+--- !u!1 &2821974240975900799 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3152143768620500797, guid: d949fc21b4329ba419d86de222984004,
+    type: 3}
+  m_PrefabInstance: {fileID: 2821974240975900798}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2821974240975900800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2821974240975900799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9897ed9ec809cfe42a34b8380b143978, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogCode: PMAT-31-
+  DialoguePanel: {fileID: 663444253}
+  DialogueText: {fileID: 663444252}
+  CantDialog: 3
+--- !u!114 &2821974240975900801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2821974240975900799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e13a4e74e1bb42418ef98d7627854ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8413043176817057839
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1116,10 +1420,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5758806167509039628, guid: 55a3307c2180e2e4c8d8cc7f4056cc8c,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 1.11
+      objectReference: {fileID: 0}
     - target: {fileID: 5873672104199103339, guid: 55a3307c2180e2e4c8d8cc7f4056cc8c,
         type: 3}
       propertyPath: m_Name
       value: gauss
+      objectReference: {fileID: 0}
+    - target: {fileID: 5873672104199103339, guid: 55a3307c2180e2e4c8d8cc7f4056cc8c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dialog
       objectReference: {fileID: 0}
     - target: {fileID: 6541664294396295633, guid: 55a3307c2180e2e4c8d8cc7f4056cc8c,
         type: 3}
@@ -1179,6 +1493,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1389142671}
+    - targetCorrespondingSourceObject: {fileID: 5873672104199103339, guid: 55a3307c2180e2e4c8d8cc7f4056cc8c,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1389142672}
+    - targetCorrespondingSourceObject: {fileID: 5873672104199103339, guid: 55a3307c2180e2e4c8d8cc7f4056cc8c,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1389142673}
   m_SourcePrefab: {fileID: 100100000, guid: 55a3307c2180e2e4c8d8cc7f4056cc8c, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -1194,3 +1516,4 @@ SceneRoots:
   - {fileID: 472405532}
   - {fileID: 1363363211365481280}
   - {fileID: 135146534}
+  - {fileID: 34252130}

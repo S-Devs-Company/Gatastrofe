@@ -14,6 +14,7 @@ public class Playable : MonoBehaviour
     public bool canPick = false;
     public bool canDialog = false;
     public static bool canPlay = true;
+    public static bool isTalking = false;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +31,10 @@ public class Playable : MonoBehaviour
         {
             Move();
             Interact();
+        }
+        else if (isTalking)
+        {
+            animator.SetBool("isWalking",false);
         }
     }
 
@@ -124,6 +129,8 @@ public class Playable : MonoBehaviour
         }
         else if (Input.GetKey(KeyCode.E) && canDialog)
         {
+            isTalking = true;
+            animator.SetBool("isWalking", false);
             NpcDialogController.SetInteraction(true);
             //Habla care tabla
         }
@@ -154,6 +161,7 @@ public class Playable : MonoBehaviour
         else if (canDialog)
         {
             canDialog = false;
+            NpcDialogController.SetInteraction(false);
         }
     }
 
