@@ -1,12 +1,12 @@
 using System;
 using UnityEngine;
 
-public class PlayerHistoriaPrimeraVez : MonoBehaviour
+public class PlayerTutorial : MonoBehaviour
 {
     Animator animator;
 
-    private static Boolean primerDialogo = false;
-    private static Boolean segundoDialogo = false;
+    public static Boolean primerDialogo = false;
+    public static Boolean segundoDialogo = false;
     public static Boolean imDone = false; //Si ya cumplió el evento del basurero
 
     // Start is called before the first frame update
@@ -24,22 +24,6 @@ public class PlayerHistoriaPrimeraVez : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        //Inputs que simulan los dialogos
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            primerDialogo = true;
-        }
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            //Cuando ya se terminó la escena de la basura
-            imDone = true;
-        }
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            segundoDialogo = true;
-        }
-
         if (EventManager.ValidarEvento("INI-22-00"))
         {
             //Si el porta no ha hecho su dialogo con el cientifico y el mejor amigo no ha terminado
@@ -71,7 +55,7 @@ public class PlayerHistoriaPrimeraVez : MonoBehaviour
                 }
             }
             //Si ya el prota hizo su dialogo con el cientifico
-            else if (primerDialogo && !imDone && !segundoDialogo)
+            else if (primerDialogo && EventManager.ValidarEvento("INI-22-00") && !segundoDialogo)
             {
                 //Se rota hacia el basurero y camina
                 GameObject.Find("prota").transform.rotation = Quaternion.Euler(0f, 96.82f, 0f);
@@ -92,8 +76,10 @@ public class PlayerHistoriaPrimeraVez : MonoBehaviour
         else
         {
             //Si ya terminó el primer dialogo y lo de la basura
-            if (imDone && primerDialogo && !segundoDialogo)
+            if (!EventManager.ValidarEvento("INI-22-00") && primerDialogo && !segundoDialogo)
             {
+                GameObject.Find("cientifico").GetComponent<StoryDialogController>().DialogCode = "PEAR-23-";
+                GameObject.Find("cientifico").GetComponent<StoryDialogController>().CantDialog = 3;
                 //Camina hacia el cientifico
                 GameObject.Find("prota").transform.rotation = Quaternion.Euler(0f, -77.9f, 0f);
                 if (gameObject.transform.position.z < 1)
@@ -104,6 +90,7 @@ public class PlayerHistoriaPrimeraVez : MonoBehaviour
                 else
                 {
                     animator.SetBool("isWalking", false);
+
                     /*
                      * 
                      * 
@@ -113,12 +100,12 @@ public class PlayerHistoriaPrimeraVez : MonoBehaviour
                      */
                 }
             }
-            else if (segundoDialogo && imDone && primerDialogo)
+            else if (segundoDialogo && !EventManager.ValidarEvento("INI-22-00") && primerDialogo)
             {
                 EventManager.ModificarEstadoEvento("INI-21-00", 1);
                 //Desvanecido de la camara
-                Playable.canPlay = true;
                 SceneManagerScript.CargarEscena("Scenes/2.3. PlanetaTierraJugable");
+                Playable.canPlay = true;
             }
         }
     }

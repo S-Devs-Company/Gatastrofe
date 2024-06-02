@@ -1,12 +1,10 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MejorAmigoPrimeraVez : MonoBehaviour
 {
     Animator animator;
-    Boolean dialogDone = false;
+    public static Boolean dialogDone = false;
     public static Boolean imDone = false;
 
     // Start is called before the first frame update

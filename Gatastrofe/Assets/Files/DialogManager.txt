@@ -2,8 +2,9 @@ PEAR-21-1;HJ: ¿Qué fue eso?
 PEAR-21-2;-Unos extraterrestres secuestraron a mi gato
 PEAR-21-3;JH: ¿QUEEEE? ¿Y qué vas a hacer?
 PEAR-21-4;-Ni idea la verdad.
-PEAR-21-5;HJ: Mira, cuando despegaron se les cayó este mapa [Le entrega el mapa] ¿Y si le dices al científico loco que te construya una nave? Él vive en la plaza central. Seguro te ayuda.
-PEAR-21-6;-Eso haré.
+PEAR-21-5;HJ: Mira, cuando despegaron se les cayó este mapa [Le entrega el mapa].
+PEAR-21-6;HJ: ¿Y si le dices al científico loco que te construya una nave? Él vive en la plaza central. Seguro te ayuda.
+PEAR-21-7;-Eso haré.
 PEAR-22-1;-Hola, disculpe, un extraterrestre acaba de secuestrar a mi gato :C. Mi amigo dice que usted me pude ayudar a construir una nave…
 PEAR-22-2;Científico Loco: Si, claro, solo necesito que deposites $10M y lo construiré enseguida
 PEAR-22-3;- :C

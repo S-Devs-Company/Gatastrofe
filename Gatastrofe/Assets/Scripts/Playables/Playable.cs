@@ -1,7 +1,4 @@
-using System;
-using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Playable : MonoBehaviour
 {
@@ -36,6 +33,7 @@ public class Playable : MonoBehaviour
         }
     }
 
+    // Función que controla el movimiento del jugador
     public void Move()
     {
         //Mover W + D
@@ -113,16 +111,20 @@ public class Playable : MonoBehaviour
         animator.SetBool("isPicking", false);
     }
 
+    // Función que controla las interacciones del NPC
     public void Interact()
     {
-        if (Input.GetKey(KeyCode.E) && canPick /*&& EventManager.ValidarEvento("INI-22-00")*/)
+        if (Input.GetKey(KeyCode.E) && canPick && EventManager.ValidarEvento("INI-22-00"))
         {
             animator.SetBool("isPicking", true);
             Destroy(pickedObject);
             pickedObject = null;
+            canPick = false;
+
         }
         else if (Input.GetKey(KeyCode.E) && canDialog)
         {
+            NpcDialogController.SetInteraction(true);
             //Habla care tabla
         }
     }
@@ -140,20 +142,6 @@ public class Playable : MonoBehaviour
             canPick = false;
             canDialog = true;
         }
-        else if (other.CompareTag("PuertaBasurero"))
-        {
-            if (GameObject.FindGameObjectsWithTag("Pick").Length == 0)
-            {
-                EventManager.ModificarEstadoEvento("INI-22-00", 1);
-                SceneManagerScript.CargarEscena("Scenes/2.1. PlanetaTierraTutorial");
-                canPlay = false;
-            }
-            else
-            {
-                //Mostrar aviso en el HUD de que todavía faltan partes de la nave
-                Debug.Log("Faltan partes de la nave.");
-            }
-        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -168,4 +156,5 @@ public class Playable : MonoBehaviour
             canDialog = false;
         }
     }
+
 }
