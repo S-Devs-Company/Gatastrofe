@@ -4,6 +4,7 @@ using UnityEngine;
 public class NpcDialogController : MonoBehaviour
 {
     private static bool isPlayerInteracting = false; // Variable que verifica si el jugador interactua con el NPC
+    private bool isPlayerInRange = false; // Variable que verifica si el jugador se encuentra en el rango de hablar
     [SerializeField] public string DialogCode; // Codigo de los dialogos que tiene el NPC
     [SerializeField] private GameObject DialoguePanel; // Panel donde se muestran los dialogos
     [SerializeField] private TMP_Text DialogueText; // Texto donde se ponen los dialogos
@@ -20,9 +21,26 @@ public class NpcDialogController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isPlayerInteracting)
+        if (isPlayerInteracting && isPlayerInRange)
         {
             StartDialogue();
+        }
+    }
+
+    // Función para saber cuando el NPC de la historia tiene que hablar con el jugador
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            this.isPlayerInRange = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            this.isPlayerInRange = false;
         }
     }
 

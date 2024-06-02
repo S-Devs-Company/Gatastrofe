@@ -536,11 +536,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC3
       objectReference: {fileID: 0}
+    - target: {fileID: 3152143768620500797, guid: d949fc21b4329ba419d86de222984004,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dialog
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3152143768620500797, guid: d949fc21b4329ba419d86de222984004,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 472405534}
   m_SourcePrefab: {fileID: 100100000, guid: d949fc21b4329ba419d86de222984004, type: 3}
+--- !u!1 &472405533 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3152143768620500797, guid: d949fc21b4329ba419d86de222984004,
+    type: 3}
+  m_PrefabInstance: {fileID: 472405532}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &472405534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472405533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e91b013af767974b8702b74c025440e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogCode: PMAT-NPC-
+  DialoguePanel: {fileID: 663444253}
+  DialogueText: {fileID: 663444252}
+  CantDialog: 2
 --- !u!1 &528815660 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7218274717145686183, guid: c52afcf7f74956c4fa0ac14b8bb8058c,
@@ -631,11 +662,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC2
       objectReference: {fileID: 0}
+    - target: {fileID: 3152143768620500797, guid: d949fc21b4329ba419d86de222984004,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dialog
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3152143768620500797, guid: d949fc21b4329ba419d86de222984004,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 569269688}
   m_SourcePrefab: {fileID: 100100000, guid: d949fc21b4329ba419d86de222984004, type: 3}
+--- !u!1 &569269687 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3152143768620500797, guid: d949fc21b4329ba419d86de222984004,
+    type: 3}
+  m_PrefabInstance: {fileID: 569269686}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &569269688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569269687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e91b013af767974b8702b74c025440e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogCode: PMAT-NPC-
+  DialoguePanel: {fileID: 663444253}
+  DialogueText: {fileID: 663444252}
+  CantDialog: 2
 --- !u!1001 &663444250
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -742,6 +804,24 @@ PrefabInstance:
 --- !u!1 &663444251 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6733888560633192103, guid: 31810e6a96c276145af6ca7e4fe55c01,
+    type: 3}
+  m_PrefabInstance: {fileID: 663444250}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &663444252 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8699345984210248803, guid: 31810e6a96c276145af6ca7e4fe55c01,
+    type: 3}
+  m_PrefabInstance: {fileID: 663444250}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &663444253 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8804112565159187056, guid: 31810e6a96c276145af6ca7e4fe55c01,
     type: 3}
   m_PrefabInstance: {fileID: 663444250}
   m_PrefabAsset: {fileID: 0}
@@ -866,6 +946,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1389142672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1389142668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9897ed9ec809cfe42a34b8380b143978, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogCode: PMAT-32-
+  DialoguePanel: {fileID: 663444253}
+  DialogueText: {fileID: 663444252}
+  CantDialog: 6
 --- !u!1 &1708257479 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7919685236690557331, guid: c52afcf7f74956c4fa0ac14b8bb8058c,
@@ -956,11 +1052,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC1
       objectReference: {fileID: 0}
+    - target: {fileID: 3152143768620500797, guid: d949fc21b4329ba419d86de222984004,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dialog
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3152143768620500797, guid: d949fc21b4329ba419d86de222984004,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1870304104}
   m_SourcePrefab: {fileID: 100100000, guid: d949fc21b4329ba419d86de222984004, type: 3}
+--- !u!1 &1870304103 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3152143768620500797, guid: d949fc21b4329ba419d86de222984004,
+    type: 3}
+  m_PrefabInstance: {fileID: 1870304102}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1870304104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870304103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e91b013af767974b8702b74c025440e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogCode: PMAT-NPC-
+  DialoguePanel: {fileID: 663444253}
+  DialogueText: {fileID: 663444252}
+  CantDialog: 2
 --- !u!4 &1932383544 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5699927406847071995, guid: 81b26820c4278a04b901961d403c4026,
@@ -1103,11 +1230,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: matemagoHistoria
       objectReference: {fileID: 0}
+    - target: {fileID: 3152143768620500797, guid: d949fc21b4329ba419d86de222984004,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dialog
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3152143768620500797, guid: d949fc21b4329ba419d86de222984004,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2821974240975900800}
   m_SourcePrefab: {fileID: 100100000, guid: d949fc21b4329ba419d86de222984004, type: 3}
+--- !u!1 &2821974240975900799 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3152143768620500797, guid: d949fc21b4329ba419d86de222984004,
+    type: 3}
+  m_PrefabInstance: {fileID: 2821974240975900798}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2821974240975900800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2821974240975900799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9897ed9ec809cfe42a34b8380b143978, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogCode: PMAT-31-
+  DialoguePanel: {fileID: 663444253}
+  DialogueText: {fileID: 663444252}
+  CantDialog: 3
 --- !u!1001 &8413043176817057839
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1120,6 +1278,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: gauss
+      objectReference: {fileID: 0}
+    - target: {fileID: 5873672104199103339, guid: 55a3307c2180e2e4c8d8cc7f4056cc8c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dialog
       objectReference: {fileID: 0}
     - target: {fileID: 6541664294396295633, guid: 55a3307c2180e2e4c8d8cc7f4056cc8c,
         type: 3}
@@ -1179,6 +1342,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1389142671}
+    - targetCorrespondingSourceObject: {fileID: 5873672104199103339, guid: 55a3307c2180e2e4c8d8cc7f4056cc8c,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1389142672}
   m_SourcePrefab: {fileID: 100100000, guid: 55a3307c2180e2e4c8d8cc7f4056cc8c, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
