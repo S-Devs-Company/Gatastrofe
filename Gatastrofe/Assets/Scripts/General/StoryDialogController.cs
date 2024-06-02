@@ -22,6 +22,8 @@ public class StoryDialogController : MonoBehaviour
     // Función que inicia el dialogo del NPC de la historia
     private void StartDialogue()
     {
+        Playable.canPlay = false;
+        Playable.isTalking = true;
         DialoguePanel.SetActive(true);
         ShowDialogues();
     }
@@ -78,6 +80,11 @@ public class StoryDialogController : MonoBehaviour
                         PlayerTutorial.segundoDialogo = true;
                     }
                 }
+            }
+            else
+            {
+                Playable.canPlay = true;
+                Playable.isTalking = false;
             }
             counter = 1;
         }

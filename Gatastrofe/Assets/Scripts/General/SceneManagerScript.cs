@@ -40,7 +40,10 @@ public class SceneManagerScript : MonoBehaviour
         }
         else if (CurrentScene == SceneManager.GetSceneByName("Scenes/2.3. PlanetaTierraJugable").buildIndex)
         {
-
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                CargarEscena("Scenes/3.1. Planeta8Jugable");
+            }
         }
     }
 

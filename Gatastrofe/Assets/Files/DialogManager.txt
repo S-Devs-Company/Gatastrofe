@@ -18,13 +18,15 @@ PEAR-NPC-2;-Espero que recuperes a tu gato, después de todo un gato es un famil
 PMAT-31-1;Mago: ¿Qué pasó? ¿Estás bien?
 PMAT-31-2;-Ayuda por favor, unos extraterrestres secuestraron a mi gato y encontré este planeta en su mapa. ¿Sabes algo?
 PMAT-31-3;Mago: Ah sí. Unos comerciantes aterrizaron ayer. Podrías hablar con nuestro príncipe: Gauss. Seguro él te puede ayudar.
-PMAT-32-1;-Saludos su majestad Gauss.
-PMAT-32-2;Príncipe Gauss: Saludos, forastero.
-PMAT-32-3;-He venido a solicitar su ayuda. Unos comerciantes secuestraron a mi gato y me informan que han estado por aquí.
-PMAT-32-4;Príncipe Gauss: Claro. Ellos estuvieron aquí. Me ofrecieron a su gato, pero soy alérgico y los rechacé. Vi que fueron en dirección al planeta de la física.
-PMAT-32-5;-Muchas gracias su brillantez. Una última petición: ¿tendrá usted algunas herramientas para reparar mi nave y seguir la búsqueda?
-PMAT-32-6;Príncipe Gauss: Si claro, pero para saber si eres digno de mis herramientas primero debes solucionar estos acertijos…
-PMAT-33-1;Príncipe Gauss: Veo que si eres digno humano. Toma mis herramientas y ten un buen viaje.
+PMAT-32-1;Mago: Habla con nuestro principe: Gauss. Seguro él te puede ayudar
+PMAT-33-1;-Saludos su majestad Gauss.
+PMAT-33-2;Príncipe Gauss: Saludos, forastero.
+PMAT-33-3;-He venido a solicitar su ayuda. Unos comerciantes secuestraron a mi gato y me informan que han estado por aquí.
+PMAT-33-4;Príncipe Gauss: Claro. Ellos estuvieron aquí. Me ofrecieron a su gato, pero soy alérgico y los rechacé. Vi que fueron en dirección al planeta de la física.
+PMAT-33-5;-Muchas gracias su brillantez. Una última petición: ¿tendrá usted algunas herramientas para reparar mi nave y seguir la búsqueda?
+PMAT-33-6;Príncipe Gauss: Si claro, pero para saber si eres digno de mis herramientas primero debes solucionar estos acertijos…
+PMAT-34-1;Principe Gauss: Prueba que eres digno, solucionando estos acertijos.
+PMAT-35-1;Príncipe Gauss: Veo que si eres digno humano. Toma mis herramientas y ten un buen viaje.
 PMAT-NPC-1;-Una vez me mire al espejo y me desmaye, no de miedo, sino de ver tanta belleza.
 PMAT-NPC-2;-El Príncipe Gauss podrá ser un príncipe pero siempre será mi rey
 PFIS-41-1;Hombre Cilindro: Ayuda por favor, viene una lluvia de meteoritos. Debes salvarnos. :0

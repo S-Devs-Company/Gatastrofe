@@ -23,6 +23,8 @@ public class NpcDialogController : MonoBehaviour
     {
         if (isPlayerInteracting && isPlayerInRange)
         {
+            Playable.canPlay = false;
+            Playable.isTalking = true;
             StartDialogue();
         }
     }
@@ -70,6 +72,8 @@ public class NpcDialogController : MonoBehaviour
             DialoguePanel.SetActive(false);
             dialogChosen = ObtenerDialogoRandom();
             counter = 1;
+            Playable.canPlay = true;
+            Playable.isTalking = false;
             SetInteraction(false);
         }
     }
