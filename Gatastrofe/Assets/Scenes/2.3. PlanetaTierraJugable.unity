@@ -231,10 +231,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e6cc76379806b149a772e2e0e78489d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogCode: 
-  DialoguePanel: {fileID: 0}
-  DialogueText: {fileID: 0}
-  CantDialog: 0
+  DialogCode: PEAR-NPC1-
+  DialoguePanel: {fileID: 1341699810}
+  DialogueText: {fileID: 1341699809}
+  CantDialog: 2
 --- !u!1 &3528625 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -763679304033801298, guid: 560e899de0c7fa94087cba52fb6e57f1,
@@ -738,10 +738,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e6cc76379806b149a772e2e0e78489d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogCode: 
-  DialoguePanel: {fileID: 0}
-  DialogueText: {fileID: 0}
-  CantDialog: 0
+  DialogCode: PEAR-NPC2-
+  DialoguePanel: {fileID: 1341699810}
+  DialogueText: {fileID: 1341699809}
+  CantDialog: 2
 --- !u!1001 &607446391
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1571,6 +1571,24 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31810e6a96c276145af6ca7e4fe55c01, type: 3}
+--- !u!114 &1341699809 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8699345984210248803, guid: 31810e6a96c276145af6ca7e4fe55c01,
+    type: 3}
+  m_PrefabInstance: {fileID: 1341699808}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1341699810 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8804112565159187056, guid: 31810e6a96c276145af6ca7e4fe55c01,
+    type: 3}
+  m_PrefabInstance: {fileID: 1341699808}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1527006807 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ade0bd069b0624a40a20176a7b6777d3,

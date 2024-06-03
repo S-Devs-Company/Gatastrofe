@@ -686,10 +686,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e6cc76379806b149a772e2e0e78489d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogCode: 
-  DialoguePanel: {fileID: 0}
-  DialogueText: {fileID: 0}
-  CantDialog: 0
+  DialogCode: PMAT-NPC-
+  DialoguePanel: {fileID: 663444253}
+  DialogueText: {fileID: 663444252}
+  CantDialog: 2
 --- !u!1 &528815660 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7218274717145686183, guid: c52afcf7f74956c4fa0ac14b8bb8058c,
@@ -812,10 +812,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e6cc76379806b149a772e2e0e78489d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogCode: 
-  DialoguePanel: {fileID: 0}
-  DialogueText: {fileID: 0}
-  CantDialog: 0
+  DialogCode: PMAT-NPC-
+  DialoguePanel: {fileID: 663444253}
+  DialogueText: {fileID: 663444252}
+  CantDialog: 2
 --- !u!1001 &663444250
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1224,10 +1224,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e6cc76379806b149a772e2e0e78489d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogCode: 
-  DialoguePanel: {fileID: 0}
-  DialogueText: {fileID: 0}
-  CantDialog: 0
+  DialogCode: PMAT-NPC-
+  DialoguePanel: {fileID: 663444253}
+  DialogueText: {fileID: 663444252}
+  CantDialog: 2
 --- !u!4 &1932383544 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5699927406847071995, guid: 81b26820c4278a04b901961d403c4026,
