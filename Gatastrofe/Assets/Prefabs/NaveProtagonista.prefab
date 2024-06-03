@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5699927406847071995}
   - component: {fileID: 2087512631322751316}
+  - component: {fileID: 6630309891730834397}
+  - component: {fileID: 8895657168302986942}
   m_Layer: 0
   m_Name: NaveProtagonista
   m_TagString: Untagged
@@ -54,6 +56,39 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.289126, y: 4.8957105, z: 1.8924718}
   m_Center: {x: -0.049581766, y: 2.4578388, z: -0.0070830584}
+--- !u!65 &6630309891730834397
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702546631885500353}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4, y: 3.2516212, z: 4}
+  m_Center: {x: 0.03928089, y: 1.4967575, z: 0}
+--- !u!114 &8895657168302986942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702546631885500353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6584ee810d50ae48be75b19009759da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1885550111057978832
 PrefabInstance:
   m_ObjectHideFlags: 0

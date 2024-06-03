@@ -1,4 +1,6 @@
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Playable : MonoBehaviour
 {
@@ -15,6 +17,7 @@ public class Playable : MonoBehaviour
     public bool canDialog = false;
     public static bool canPlay = true;
     public static bool isTalking = false;
+    public static bool canFly = false;
 
     // Start is called before the first frame update
     void Start()
@@ -133,6 +136,13 @@ public class Playable : MonoBehaviour
             animator.SetBool("isWalking", false);
             NpcDialogController.SetInteraction(true);
             //Habla care tabla
+        }
+        //Abrir el mapa de la nave
+        else if (Input.GetKey(KeyCode.E) && canFly)
+        {
+            NaveProtaController.mapa.SetActive(true);
+            NaveProtaController.btnMapa.SetActive(true);
+            NaveProtaController.ValidarPlanetas();
         }
     }
 
