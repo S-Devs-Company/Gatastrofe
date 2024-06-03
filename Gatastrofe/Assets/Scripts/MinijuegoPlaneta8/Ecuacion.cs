@@ -31,105 +31,7 @@ public class Ecuacion : MonoBehaviour
     public int GetNumero2() => numero2;
     public char GetOperacion() => operacion;
     public double GetResultado() => resultado;
-
-    // Función para generar la ecuación y ponerla en la vista
-    public string GenerarEcuacion()
-    {
-        System.Random rand = new System.Random();
-        //define num1 y num2
-        numero1 = rand.Next(1, 11);
-        numero2 = rand.Next(1, 11);
-
-        //define la operación
-        switch (rand.Next(1, 5))
-        {
-            case 1:
-                operacion = '+';
-                break;
-            case 2:
-                operacion = '-';
-                break;
-            case 3:
-                operacion = '*';
-                break;
-            case 4:
-                operacion = '/';
-                break;
-            default:
-                Console.WriteLine("ayuda");
-                break;
-        }
-
-        //resuleve la operación
-        switch (operacion)
-        {
-            case '+':
-                resultado = numero1 + numero2;
-                break;
-            case '-':
-                bool cambio = false;
-                while (numero1 < numero2)
-                {
-                    if (cambio)
-                    {
-                        numero2 = rand.Next(1, 11);
-                        cambio = !cambio;
-                    }
-                    else
-                    {
-                        numero1 = rand.Next(1, 11);
-                        cambio = !cambio;
-                    }
-                }
-                resultado = numero1 - numero2;
-                break;
-            case '*':
-                resultado = numero1 * numero2;
-                break;
-            case '/':
-                cambio = false;
-                while (numero1 % numero2 != 0)
-                {
-                    if (cambio)
-                    {
-                        numero2 = rand.Next(1, 11);
-                        cambio = !cambio;
-                    }
-                    else
-                    {
-                        numero1 = rand.Next(1, 11);
-                        cambio = !cambio;
-                    }
-                }
-                resultado = numero1 / numero2;
-                break;
-            default:
-                Console.WriteLine("WTF");
-                break;
-        }
-
-        //Crea la incognita
-        incognita = rand.Next(1, 5);
-        switch (incognita)
-        {
-            case 1:
-                return "? " + operacion + " " + numero2 + " = " + resultado;
-            case 2:
-                return numero1 + " ?" + " " + numero2 + " = " + resultado;
-            case 3:
-                return numero1 + " " + operacion + " ?  = " + resultado;
-            case 4:
-                return numero1 + " " + operacion + " " + numero2 + " = ?";
-            default:
-                throw new ArgumentOutOfRangeException();
-        }
-    }
-
-    public int GetIncongnita()
-    {
-        return incognita;
-    }
-
+    public int GetIncongnita() => incognita;
     public string GetValorIncongnita()
     {
         switch (incognita)
@@ -148,6 +50,71 @@ public class Ecuacion : MonoBehaviour
         }
     }
 
+    // Función para generar la ecuación
+    public void GenerarEcuacion()
+    {
+        System.Random rand = new System.Random();
+        //define num1 y num2
+        numero1 = rand.Next(1, 11);
+        numero2 = rand.Next(1, 11);
+
+        //define la operación y la realiza
+        switch (rand.Next(1, 5))
+        {
+            case 1:
+                operacion = '+';
+                resultado = numero1 + numero2;
+                break;
+            case 2:
+                operacion = '-';
+                bool cambio = false;
+                while (numero1 < numero2)
+                {
+                    if (cambio)
+                    {
+                        numero2 = rand.Next(1, 11);
+                        cambio = !cambio;
+                    }
+                    else
+                    {
+                        numero1 = rand.Next(1, 11);
+                        cambio = !cambio;
+                    }
+                }
+                resultado = numero1 - numero2;
+                break;
+            case 3:
+                operacion = '*';
+                resultado = numero1 * numero2;
+                break;
+            case 4:
+                operacion = '/';
+                cambio = false;
+                while (numero1 % numero2 != 0)
+                {
+                    if (cambio)
+                    {
+                        numero2 = rand.Next(1, 11);
+                        cambio = !cambio;
+                    }
+                    else
+                    {
+                        numero1 = rand.Next(1, 11);
+                        cambio = !cambio;
+                    }
+                }
+                resultado = numero1 / numero2;
+                break;
+            default:
+                Console.WriteLine("ayuda");
+                break;
+        }
+
+        //Crea la incognita
+        incognita = rand.Next(1, 5);
+    }
+
+    // Función para Resolver la ecuación con los valores en la vista
     public bool Resolver()
     {
         try
@@ -195,7 +162,6 @@ public class Ecuacion : MonoBehaviour
                             return numero1 + int.Parse(num2.GetParsedText()) == resultado;
                         case '-':
                             return numero1 - int.Parse(num2.GetParsedText()) == resultado;
-
                         case '*':
                             return numero1 * int.Parse(num2.GetParsedText()) == resultado;
                         case '/':
@@ -216,10 +182,10 @@ public class Ecuacion : MonoBehaviour
         catch (Exception)
         {
             return false;
-
         }
     }
 
+    // Función para pintar la ecuación dependiendo de si se resolvió o no
     public void PintarEcuacion()
     {
         if (Resolver())
@@ -242,9 +208,9 @@ public class Ecuacion : MonoBehaviour
         }
     }
 
-    public string[] MostrarEcuacion()
+    // Función para mostrar la ecuación en los elementos de la vista
+    public void MostrarEcuacion()
     {
-        string[] ecuacion = new string[4];
         switch (incognita)
         {
             case 1:
@@ -255,12 +221,6 @@ public class Ecuacion : MonoBehaviour
                 operador.GetComponentInParent<Button>().interactable = false;
                 res.text = resultado.ToString();
                 res.GetComponentInParent<Button>().interactable = false;
-
-
-                ecuacion[0] = "?";
-                ecuacion[1] = operacion.ToString();
-                ecuacion[2] = numero2.ToString();
-                ecuacion[3] = resultado.ToString();
                 break;
             case 2:
                 num1.text = numero1.ToString();
@@ -270,11 +230,6 @@ public class Ecuacion : MonoBehaviour
                 operador.text = "?";
                 res.text = resultado.ToString();
                 res.GetComponentInParent<Button>().interactable = false;
-
-                ecuacion[0] = numero1.ToString();
-                ecuacion[1] = "?";
-                ecuacion[2] = numero2.ToString();
-                ecuacion[3] = resultado.ToString();
                 break;
             case 3:
                 num1.text = numero1.ToString();
@@ -284,10 +239,7 @@ public class Ecuacion : MonoBehaviour
                 operador.GetComponentInParent<Button>().interactable = false;
                 res.text = resultado.ToString();
                 res.GetComponentInParent<Button>().interactable = false;
-                ecuacion[0] = numero1.ToString();
-                ecuacion[1] = operacion.ToString();
-                ecuacion[2] = "?";
-                ecuacion[3] = resultado.ToString();
+
                 break;
             case 4:
                 num1.text = numero1.ToString();
@@ -297,15 +249,11 @@ public class Ecuacion : MonoBehaviour
                 operador.text = operacion.ToString();
                 operador.GetComponentInParent<Button>().interactable = false;
                 res.text = "?";
-                ecuacion[0] = numero1.ToString();
-                ecuacion[1] = operacion.ToString();
-                ecuacion[2] = numero2.ToString();
-                ecuacion[3] = "?";
+
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
         }
-        return ecuacion;
     }
 
     public override string ToString()
@@ -315,17 +263,5 @@ public class Ecuacion : MonoBehaviour
                 + "operacion: " + this.GetOperacion() + "\n"
                 + "resultado: " + this.GetResultado() + "\n"
                 + "incognita en el elemento: " + this.GetIncongnita();
-    }
-
-    //Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }
