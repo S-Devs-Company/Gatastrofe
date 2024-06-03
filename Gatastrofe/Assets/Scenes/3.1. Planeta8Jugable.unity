@@ -1228,6 +1228,72 @@ MonoBehaviour:
   DialoguePanel: {fileID: 663444253}
   DialogueText: {fileID: 663444252}
   CantDialog: 2
+--- !u!1 &1901877647
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1901877650}
+  - component: {fileID: 1901877649}
+  - component: {fileID: 1901877648}
+  m_Layer: 0
+  m_Name: IniciadorMinijuego
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1901877648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1901877647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c479e9692df4de45b99894b9528385a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1901877649
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1901877647}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.8187087, y: 1, z: 1.8847363}
+  m_Center: {x: 0.35729277, y: 0, z: 0.4423685}
+--- !u!4 &1901877650
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1901877647}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0.11719066, z: 0, w: 0.99310946}
+  m_LocalPosition: {x: -1.23, y: 0.72, z: 24.93}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -13.46, z: 0}
 --- !u!4 &1932383544 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5699927406847071995, guid: 81b26820c4278a04b901961d403c4026,
@@ -1387,6 +1453,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2821974240975900801}
+    - targetCorrespondingSourceObject: {fileID: 3152143768620500797, guid: d949fc21b4329ba419d86de222984004,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2821974240975900802}
   m_SourcePrefab: {fileID: 100100000, guid: d949fc21b4329ba419d86de222984004, type: 3}
 --- !u!1 &2821974240975900799 stripped
 GameObject:
@@ -1422,6 +1492,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e13a4e74e1bb42418ef98d7627854ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2821974240975900802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2821974240975900799}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e6cc76379806b149a772e2e0e78489d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogCode: PMAT-NPC-
+  DialoguePanel: {fileID: 663444253}
+  DialogueText: {fileID: 663444252}
+  CantDialog: 2
 --- !u!1001 &8413043176817057839
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1527,3 +1613,4 @@ SceneRoots:
   - {fileID: 1363363211365481280}
   - {fileID: 135146534}
   - {fileID: 34252130}
+  - {fileID: 1901877650}

@@ -103,6 +103,8 @@ public class PlayerTutorial : MonoBehaviour
             else if (segundoDialogo && !EventManager.ValidarEvento("INI-22-00") && primerDialogo)
             {
                 EventManager.ModificarEstadoEvento("INI-21-00", 1);
+                EventManager.ModificarEstadoEvento("NAV-23-00", 1);
+                EventManager.ModificarEstadoEvento("NAV-31-00", 1);
                 //Desvanecido de la camara
                 SceneManagerScript.CargarEscena("Scenes/2.3. PlanetaTierraJugable");
                 Playable.canPlay = true;

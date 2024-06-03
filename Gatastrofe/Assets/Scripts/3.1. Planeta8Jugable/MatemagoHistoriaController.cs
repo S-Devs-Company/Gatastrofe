@@ -5,11 +5,15 @@ using UnityEngine;
 public class MatemagoHistoriaController : MonoBehaviour
 {
     private StoryDialogController dialogController;
+    private NpcDialogController npcController;
 
     // Start is called before the first frame update
     void Start()
     {
+        npcController = GetComponent<NpcDialogController>();
         dialogController = GetComponent<StoryDialogController>();
+        dialogController.enabled = true;
+        npcController.enabled = false;
     }
 
     // Update is called once per frame
@@ -28,6 +32,10 @@ public class MatemagoHistoriaController : MonoBehaviour
         else
         {
             dialogController.enabled = false;
+            npcController.enabled = true;
+            npcController.DialogCode = "PMAT-NPC-";
+            npcController.CantDialog= 2;
+
         }
     }
 

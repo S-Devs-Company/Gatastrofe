@@ -5,11 +5,13 @@ using UnityEngine.UI;
 
 public class Ecuacion : MonoBehaviour
 {
+    // Variables de la vista
     public TextMeshProUGUI num1;
     public TextMeshProUGUI num2;
     public TextMeshProUGUI operador;
     public TextMeshProUGUI res;
 
+    // Variables internas
     private int numero1;
     private int numero2;
     private char operacion;
@@ -24,26 +26,13 @@ public class Ecuacion : MonoBehaviour
         this.incognita = 0;
     }
 
-    public int GetNumero1()
-    {
-        return numero1;
-    }
+    // Getters de las variables internas
+    public int GetNumero1() => numero1;
+    public int GetNumero2() => numero2;
+    public char GetOperacion() => operacion;
+    public double GetResultado() => resultado;
 
-    public int GetNumero2()
-    {
-        return numero2;
-    }
-
-    public char GetOperacion()
-    {
-        return operacion;
-    }
-
-    public double GetResultado()
-    {
-        return resultado;
-    }
-
+    // Función para generar la ecuación y ponerla en la vista
     public string GenerarEcuacion()
     {
         System.Random rand = new System.Random();

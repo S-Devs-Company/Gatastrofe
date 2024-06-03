@@ -58,6 +58,7 @@ public class NaveProtaController : MonoBehaviour
             Debug.Log("Nais, aqui nos quedamos");
         }
         Playable.canFly = false;
+        Playable.canPlay = true;
     }
 
     public static void ValidarPlanetas()
@@ -109,5 +110,6 @@ public class NaveProtaController : MonoBehaviour
     {
         mapa.SetActive(false);
         btnMapa.SetActive(false);
+        Playable.canPlay = true;
     }
 }

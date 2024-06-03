@@ -140,6 +140,7 @@ public class Playable : MonoBehaviour
         //Abrir el mapa de la nave
         else if (Input.GetKey(KeyCode.E) && canFly)
         {
+            canPlay = false;
             NaveProtaController.mapa.SetActive(true);
             NaveProtaController.btnMapa.SetActive(true);
             NaveProtaController.ValidarPlanetas();
