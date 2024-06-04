@@ -4,6 +4,7 @@ using UnityEngine;
 public class StoryDialogController : MonoBehaviour
 {
     private bool isPlayerInRange = false;
+    public bool finishedTalking = false;
     [SerializeField] public string DialogCode;
     [SerializeField] private GameObject DialoguePanel;
     [SerializeField] private GameObject PanelInstrucciones;
@@ -23,10 +24,14 @@ public class StoryDialogController : MonoBehaviour
     // Función que inicia el dialogo del NPC de la historia
     private void StartDialogue()
     {
+        finishedTalking = false;
         Playable.canPlay = false;
         Playable.isTalking = true;
         DialoguePanel.SetActive(true);
-        PanelInstrucciones.SetActive(false);
+        if (PanelInstrucciones != null)
+        {
+            PanelInstrucciones.SetActive(false);
+        }
         ShowDialogues();
     }
 
@@ -63,15 +68,15 @@ public class StoryDialogController : MonoBehaviour
         }
         if (counter > CantDialog)
         {
+            finishedTalking = true;
             DialoguePanel.SetActive(false);
-            PanelInstrucciones.SetActive(true);
+            if (PanelInstrucciones != null)
+            {
+                PanelInstrucciones.SetActive(true);
+            }
             isPlayerInRange = false;
             if (EventManager.ValidarEvento("INI-21-00"))
             {
-                if (GameObject.Find("mejorAmigo") == gameObject)
-                {
-                    MejorAmigoPrimeraVez.dialogDone = true;
-                }
                 if (GameObject.Find("cientifico") == gameObject)
                 {
                     if (EventManager.ValidarEvento("INI-22-00"))

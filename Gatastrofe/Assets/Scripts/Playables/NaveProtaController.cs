@@ -11,14 +11,12 @@ public class NaveProtaController : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("Set");
         mapa = GameObject.Find("Player").transform.GetChild(1).GetChild(0).GetChild(0).gameObject;
         btnMapa = GameObject.Find("Player").transform.GetChild(1).GetChild(0).GetChild(1).gameObject;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Enter");
         mapa = GameObject.Find("Player").transform.GetChild(1).GetChild(0).GetChild(0).gameObject;
         btnMapa = GameObject.Find("Player").transform.GetChild(1).GetChild(0).GetChild(1).gameObject;
         Playable.canFly = true;
@@ -27,37 +25,45 @@ public class NaveProtaController : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log("Exit");
         Playable.canFly = false;
     }
 
     public void IniciarViaje(string codigoDePlaneta)
     {
-        Debug.Log("Viaje");
         if (codigoDePlaneta.Equals("PTIE"))
         {
-            SceneManagerScript.CargarEscena("Scenes/2.3. PlanetaTierraJugable");
+            //SceneManagerScript.CargarEscena("Scenes/2.3. PlanetaTierraJugable");
+            SceneManagerScript.CargarEscena("Scenes/FlappyShip");
+            ViajeroController.planetaDestino = "Scenes/2.3. PlanetaTierraJugable";
             //GameObject.Find("prota").transform = ;
 
         }
         else if (codigoDePlaneta.Equals("PMAT"))
         {
-            SceneManagerScript.CargarEscena("Scenes/3.1. Planeta8Jugable");
+            //SceneManagerScript.CargarEscena("Scenes/3.1. Planeta8Jugable");
+            SceneManagerScript.CargarEscena("Scenes/FlappyShip");
+            ViajeroController.planetaDestino = "Scenes/3.1. Planeta8Jugable";
             //GameObject.Find("prota").transform = ;
         }
         else if (codigoDePlaneta.Equals("PFIS"))
         {
-            SceneManagerScript.CargarEscena("Scenes/4.1. Planeta7Jugable");
+            //SceneManagerScript.CargarEscena("Scenes/4.1. Planeta7Jugable");
+            SceneManagerScript.CargarEscena("Scenes/FlappyShip");
+            ViajeroController.planetaDestino = "Scenes/4.1. Planeta7Jugable";
             //GameObject.Find("prota").transform = ;
         }
         else if (codigoDePlaneta.Equals("PEST"))
         {
-            SceneManagerScript.CargarEscena("Scenes/5.1. Planeta6Jugable");
+            //SceneManagerScript.CargarEscena("Scenes/5.1. Planeta6Jugable");
+            SceneManagerScript.CargarEscena("Scenes/FlappyShip");
+            ViajeroController.planetaDestino = "Scenes/5.1. Planeta6Jugable";
             //GameObject.Find("prota").transform = ;
         }
         else if (codigoDePlaneta.Equals("PGEO"))
         {
-            SceneManagerScript.CargarEscena("Scenes/6.1. Planeta5Jugable");
+            //SceneManagerScript.CargarEscena("Scenes/6.1. Planeta5Jugable");
+            SceneManagerScript.CargarEscena("Scenes/FlappyShip");
+            ViajeroController.planetaDestino = "Scenes/6.1. Planeta5Jugable";
             //GameObject.Find("prota").transform = ;
         }
         else if (codigoDePlaneta.Equals("123"))
@@ -74,7 +80,6 @@ public class NaveProtaController : MonoBehaviour
 
     public static void ValidarPlanetas()
     {
-        Debug.Log("Validar");
         //Si evento nav es 1
         if (!EventManager.ValidarEvento("NAV-23-00"))
         {
@@ -120,7 +125,6 @@ public class NaveProtaController : MonoBehaviour
 
     public void CloseMap()
     {
-        Debug.Log("Close");
         mapa.SetActive(false);
         btnMapa.SetActive(false);
         Playable.canPlay = true;
@@ -129,7 +133,6 @@ public class NaveProtaController : MonoBehaviour
 
     public static void OpenMap() 
     {
-        Debug.Log("Open");
         GameObject.Find("Player").transform.GetChild(1).GetChild(0).GetChild(3).gameObject.SetActive(false);
         mapa.SetActive(true);
         btnMapa.SetActive(true);

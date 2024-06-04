@@ -6,17 +6,23 @@ public class MejorAmigoPrimeraVez : MonoBehaviour
     Animator animator;
     public static Boolean dialogDone = false;
     public static Boolean imDone = false;
+    StoryDialogController storyDialogController;
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
         Playable.canPlay = false;
+        storyDialogController = GetComponent<StoryDialogController>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (storyDialogController.finishedTalking)
+        {
+            dialogDone = true;
+        }
         //Si no se ha completado la primera parte de la historia
         if (EventManager.ValidarEvento("INI-22-00"))
         {

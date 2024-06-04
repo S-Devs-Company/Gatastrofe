@@ -5,6 +5,7 @@ using UnityEngine;
 public class AsteroideSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject asteroidePrefab;
+    [SerializeField] private GameObject nave;
     float contador;
 
     // Update is called once per frame
@@ -13,8 +14,7 @@ public class AsteroideSpawner : MonoBehaviour
         contador += Time.deltaTime;
         if (contador >= Random.Range(2f,4f))
         {
-            float y = Random.Range(-4f, 4f);
-            Vector3 posicion = new Vector3(10, y, 0);
+            Vector3 posicion = new Vector3(10, nave.transform.position.y, 0);
             Quaternion rotacion = new Quaternion();
             Instantiate(asteroidePrefab, posicion, rotacion);
             contador = 0;

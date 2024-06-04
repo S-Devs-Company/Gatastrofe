@@ -1976,8 +1976,11 @@ MonoBehaviour:
   m_text: '- Busca todas las piezas para construir tu nave.
 
 
-    -Presiona ''E''
-    para recogerlas.'
+    - Presiona ''E''
+    para recogerlas.
+
+
+    - Presiona ''W''''A''''S''''D'' para moverte'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1277598f9a8981246a1ef3d46e2831ed, type: 2}
   m_sharedMaterial: {fileID: 395766401685696482, guid: 1277598f9a8981246a1ef3d46e2831ed,

@@ -25,7 +25,7 @@ public class PuertaBasurero : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        instrucciones.text = "- Busca todas las piezas para construir tu nave.\r\n\r\n-Presiona 'E' para recogerlas.";
+        instrucciones.text = "- Busca todas las piezas para construir tu nave.\r\n\r\n- Presiona 'E' para recogerlas.\r\n\r\n- Presiona 'W''A''S''D' para moverte";
     }
 
 }
