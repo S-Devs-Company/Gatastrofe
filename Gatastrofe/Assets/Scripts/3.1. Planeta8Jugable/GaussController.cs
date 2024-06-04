@@ -18,6 +18,10 @@ public class GaussController : MonoBehaviour
         {
             dialogController.DialogCode = "PMAT-33-";
             dialogController.CantDialog = 6;
+            if (dialogController.finishedTalking)
+            {
+                EventManager.ModificarEstadoEvento("PMJ-31-01", 1);
+            }
         }
         else if(EventManager.ValidarEvento("PMJ-32-00"))
         {
@@ -28,15 +32,9 @@ public class GaussController : MonoBehaviour
         {
             dialogController.DialogCode = "PMAT-35-";
             dialogController.CantDialog = 1;
+            PlayerSpawnerController.intentoMinijuego = false;
         }
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (EventManager.ValidarEvento("PMJ-31-01"))
-        {
-            EventManager.ModificarEstadoEvento("PMJ-31-01", 1);
-        }
-        
-    }
+    
 }

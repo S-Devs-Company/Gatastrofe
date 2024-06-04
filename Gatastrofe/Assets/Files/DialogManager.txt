@@ -27,11 +27,11 @@ PMAT-33-2;Príncipe Gauss: Saludos, forastero.
 PMAT-33-3;Tu: He venido a solicitar su ayuda. Unos comerciantes secuestraron a mi gato y me informan que han estado por aquí.
 PMAT-33-4;Príncipe Gauss: Claro. Ellos estuvieron aquí. Me ofrecieron a su gato, pero soy alérgico y los rechacé. Vi que fueron en dirección al planeta de la física.
 PMAT-33-5;Tu: Muchas gracias su brillantez. Una última petición: ¿tendrá usted algunas herramientas para reparar mi nave y seguir la búsqueda?
-PMAT-33-6;Príncipe Gauss: Si claro, pero para saber si eres digno de mis herramientas primero debes solucionar estos acertijos…
-PMAT-34-1;Principe Gauss: Prueba que eres digno, solucionando estos acertijos.
+PMAT-33-6;Príncipe Gauss: Si claro, pero para saber si eres digno de mis herramientas primero debes solucionar estos acertijos… Acercate a la puerta para comenzar.
+PMAT-34-1;Principe Gauss: Prueba que eres digno, solucionando estos acertijos. Acercate a la puerta para comenzar.
 PMAT-35-1;Príncipe Gauss: Veo que si eres digno humano. Toma mis herramientas y ten un buen viaje.
 PMAT-NPC-1;MateMago: En cada línea temporal, las ecuaciones de Gauss nos revelan un universo de números esperando ser descubierto.
-PMAT-NPC-2;Matemago: La identidad de Euler une las constantes más fundamentales de la matemática en una sola ecuación, ¡un verdadero tesoro a través del tiempo!
+PMAT-NPC-2;MateMago: La identidad de Euler une las constantes más fundamentales de la matemática en una sola ecuación, ¡un verdadero tesoro a través del tiempo!
 PFIS-41-1;Hombre Cilindro: Ayuda por favor, viene una lluvia de meteoritos. Debes salvarnos. :0
 PFIS-42-1;-Disculpen, me informaron que unos comerciantes pasaron por aquí vendiendo un gato. Ese es mi gato, ellos lo secuestraron.
 PFIS-42-2;Hombre Cilindro: Si claro, pero apenas vieron la lluvia de meteoritos se fueron hacia el planeta de la estadística. Perdón por no poder ayudar más. Ten un poco de gasolina y buen viaje.

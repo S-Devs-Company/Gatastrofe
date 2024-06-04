@@ -7,6 +7,7 @@ public class NpcDialogController : MonoBehaviour
     private bool isPlayerInRange = false; // Variable que verifica si el jugador se encuentra en el rango de hablar
     [SerializeField] public string DialogCode; // Codigo de los dialogos que tiene el NPC
     [SerializeField] private GameObject DialoguePanel; // Panel donde se muestran los dialogos
+    [SerializeField] private GameObject PanelInstrucciones; //Panel opuesto al panel de dialogos
     [SerializeField] private TMP_Text DialogueText; // Texto donde se ponen los dialogos
     [SerializeField] public int CantDialog; // Cantidad de dialogos que tiene el NPC
     private int dialogChosen = 1;
@@ -50,6 +51,7 @@ public class NpcDialogController : MonoBehaviour
     private void StartDialogue()
     {
         DialoguePanel.SetActive(true);
+        PanelInstrucciones.SetActive(false);
         ShowDialogues();
     }
 
@@ -70,6 +72,7 @@ public class NpcDialogController : MonoBehaviour
         if (counter > 1)
         {
             DialoguePanel.SetActive(false);
+            PanelInstrucciones.SetActive(true);
             dialogChosen = ObtenerDialogoRandom();
             counter = 1;
             Playable.canPlay = true;

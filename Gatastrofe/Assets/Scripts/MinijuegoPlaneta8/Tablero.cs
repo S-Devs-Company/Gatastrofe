@@ -84,6 +84,7 @@ public class Tablero : MonoBehaviour
                 EventManager.ModificarEstadoEvento("PMJ-32-00", 1);
                 EventManager.ModificarEstadoEvento("NAV-41-00", 1);
                 SceneManagerScript.CargarEscena("Scenes/3.1. Planeta8Jugable");
+                PlayerSpawnerController.intentoMinijuego = true;
             }
             else
             {
@@ -93,6 +94,7 @@ public class Tablero : MonoBehaviour
         else
         {
             SceneManagerScript.CargarEscena("Scenes/3.1. Planeta8Jugable");
+            PlayerSpawnerController.intentoMinijuego = true;
         }
     }
 
