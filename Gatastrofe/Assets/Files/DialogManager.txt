@@ -31,7 +31,7 @@ PMAT-33-6;Príncipe Gauss: Si claro, pero para saber si eres digno de mis herram
 PMAT-34-1;Principe Gauss: Prueba que eres digno, solucionando estos acertijos.
 PMAT-35-1;Príncipe Gauss: Veo que si eres digno humano. Toma mis herramientas y ten un buen viaje.
 PMAT-NPC-1;MateMago: En cada línea temporal, las ecuaciones de Gauss nos revelan un universo de números esperando ser descubierto.
-PMAT-NPC-2;Matemago: La identidad de Euler une las constantes más fundamentales de la matemática en una sola ecuación, ¡un verdadero tesoro a través del tiempo!
+PMAT-NPC-2;MateMago: La identidad de Euler une las constantes más fundamentales de la matemática en una sola ecuación, ¡un verdadero tesoro a través del tiempo!
 PFIS-41-1;Hombre Cilindro: Ayuda por favor, viene una lluvia de meteoritos. Debes salvarnos. :0
 PFIS-42-1;-Disculpen, me informaron que unos comerciantes pasaron por aquí vendiendo un gato. Ese es mi gato, ellos lo secuestraron.
 PFIS-42-2;Hombre Cilindro: Si claro, pero apenas vieron la lluvia de meteoritos se fueron hacia el planeta de la estadística. Perdón por no poder ayudar más. Ten un poco de gasolina y buen viaje.

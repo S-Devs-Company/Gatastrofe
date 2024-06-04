@@ -6,6 +6,7 @@ public class StoryDialogController : MonoBehaviour
     private bool isPlayerInRange = false;
     [SerializeField] public string DialogCode;
     [SerializeField] private GameObject DialoguePanel;
+    [SerializeField] private GameObject PanelInstrucciones;
     [SerializeField] private TMP_Text DialogueText;
     [SerializeField] public int CantDialog;
     private int counter = 1;
@@ -25,6 +26,7 @@ public class StoryDialogController : MonoBehaviour
         Playable.canPlay = false;
         Playable.isTalking = true;
         DialoguePanel.SetActive(true);
+        PanelInstrucciones.SetActive(false);
         ShowDialogues();
     }
 
@@ -62,6 +64,7 @@ public class StoryDialogController : MonoBehaviour
         if (counter > CantDialog)
         {
             DialoguePanel.SetActive(false);
+            PanelInstrucciones.SetActive(true);
             isPlayerInRange = false;
             if (EventManager.ValidarEvento("INI-21-00"))
             {

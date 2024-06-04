@@ -11,24 +11,29 @@ public class NaveProtaController : MonoBehaviour
 
     private void Start()
     {
-        mapa = GameObject.Find("Player").transform.GetChild(0).GetChild(0).gameObject;
-        btnMapa = GameObject.Find("Player").transform.GetChild(0).GetChild(1).gameObject;
+        Debug.Log("Set");
+        mapa = GameObject.Find("Player").transform.GetChild(1).GetChild(0).GetChild(0).gameObject;
+        btnMapa = GameObject.Find("Player").transform.GetChild(1).GetChild(0).GetChild(1).gameObject;
     }
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Enter");
+        mapa = GameObject.Find("Player").transform.GetChild(1).GetChild(0).GetChild(0).gameObject;
+        btnMapa = GameObject.Find("Player").transform.GetChild(1).GetChild(0).GetChild(1).gameObject;
         Playable.canFly = true;
         ValidarPlanetas();
     }
 
     private void OnTriggerExit(Collider other)
     {
+        Debug.Log("Exit");
         Playable.canFly = false;
     }
 
     public void IniciarViaje(string codigoDePlaneta)
     {
-        Debug.Log("Volando");
+        Debug.Log("Viaje");
         if (codigoDePlaneta.Equals("PTIE"))
         {
             SceneManagerScript.CargarEscena("Scenes/2.3. PlanetaTierraJugable");
@@ -55,6 +60,10 @@ public class NaveProtaController : MonoBehaviour
             SceneManagerScript.CargarEscena("Scenes/6.1. Planeta5Jugable");
             //GameObject.Find("prota").transform = ;
         }
+        else if (codigoDePlaneta.Equals("123"))
+        {
+            Debug.Log("No me mires, yo si funciono");
+        }
         else
         {
             Debug.Log("Nais, aqui nos quedamos");
@@ -65,55 +74,66 @@ public class NaveProtaController : MonoBehaviour
 
     public static void ValidarPlanetas()
     {
-        Debug.Log("Validando");
+        Debug.Log("Validar");
         //Si evento nav es 1
         if (!EventManager.ValidarEvento("NAV-23-00"))
         {
-            GameObject.Find("Player").transform.GetChild(0).GetChild(0).GetChild(2).gameObject.GetComponent<Button>().interactable = true;
+            GameObject.Find("Player").transform.GetChild(1).GetChild(0).GetChild(0).GetChild(2).gameObject.GetComponent<Button>().interactable = true;
         }
         else
         {
-            GameObject.Find("Player").transform.GetChild(0).GetChild(0).GetChild(2).gameObject.GetComponent<Button>().interactable = false;
+            GameObject.Find("Player").transform.GetChild(1).GetChild(0).GetChild(0).GetChild(2).gameObject.GetComponent<Button>().interactable = false;
         }//Si evento nav es 1
         if (!EventManager.ValidarEvento("NAV-31-00"))
         {
-            GameObject.Find("Player").transform.GetChild(0).GetChild(0).GetChild(3).gameObject.GetComponent<Button>().interactable = true;
+            GameObject.Find("Player").transform.GetChild(1).GetChild(0).GetChild(0).GetChild(3).gameObject.GetComponent<Button>().interactable = true;
         }
         else
         {
-            GameObject.Find("Player").transform.GetChild(0).GetChild(0).GetChild(3).gameObject.GetComponent<Button>().interactable = false;
+            GameObject.Find("Player").transform.GetChild(1).GetChild(0).GetChild(0).GetChild(3).gameObject.GetComponent<Button>().interactable = false;
         }//Si evento nav es 1
         if (!EventManager.ValidarEvento("NAV-41-00"))
         {
-            GameObject.Find("Player").transform.GetChild(0).GetChild(0).GetChild(4).gameObject.GetComponent<Button>().interactable = true;
+            GameObject.Find("Player").transform.GetChild(1).GetChild(0).GetChild(0).GetChild(4).gameObject.GetComponent<Button>().interactable = true;
         }
         else
         {
-            GameObject.Find("Player").transform.GetChild(0).GetChild(0).GetChild(4).gameObject.GetComponent<Button>().interactable = false;
+            GameObject.Find("Player").transform.GetChild(1).GetChild(0).GetChild(0).GetChild(4).gameObject.GetComponent<Button>().interactable = false;
         }//Si evento nav es 1
         if (!EventManager.ValidarEvento("NAV-51-00"))
         {
-            GameObject.Find("Player").transform.GetChild(0).GetChild(0).GetChild(5).gameObject.GetComponent<Button>().interactable = true;
+            GameObject.Find("Player").transform.GetChild(1).GetChild(0).GetChild(0).GetChild(5).gameObject.GetComponent<Button>().interactable = true;
         }
         else
         {
-            GameObject.Find("Player").transform.GetChild(0).GetChild(0).GetChild(5).gameObject.GetComponent<Button>().interactable = false;
+            GameObject.Find("Player").transform.GetChild(1).GetChild(0).GetChild(0).GetChild(5).gameObject.GetComponent<Button>().interactable = false;
         }//Si evento nav es 1
         if (!EventManager.ValidarEvento("NAV-61-00"))
         {
-            GameObject.Find("Player").transform.GetChild(0).GetChild(0).GetChild(6).gameObject.GetComponent<Button>().interactable = true;
+            GameObject.Find("Player").transform.GetChild(1).GetChild(0).GetChild(0).GetChild(6).gameObject.GetComponent<Button>().interactable = true;
         }
         else
         {
-            GameObject.Find("Player").transform.GetChild(0).GetChild(0).GetChild(6).gameObject.GetComponent<Button>().interactable = false;
+            GameObject.Find("Player").transform.GetChild(1).GetChild(0).GetChild(0).GetChild(6).gameObject.GetComponent<Button>().interactable = false;
         }
     }
 
     public void CloseMap()
     {
-        Debug.Log("Cerrando");
+        Debug.Log("Close");
         mapa.SetActive(false);
         btnMapa.SetActive(false);
         Playable.canPlay = true;
+        GameObject.Find("Player").transform.GetChild(1).GetChild(0).GetChild(3).gameObject.SetActive(true);
     }
+
+    public static void OpenMap() 
+    {
+        Debug.Log("Open");
+        GameObject.Find("Player").transform.GetChild(1).GetChild(0).GetChild(3).gameObject.SetActive(false);
+        mapa.SetActive(true);
+        btnMapa.SetActive(true);
+        Playable.canPlay = false;
+    }
+
 }
