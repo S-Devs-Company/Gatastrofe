@@ -1480,6 +1480,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 701082955623151560, guid: 31810e6a96c276145af6ca7e4fe55c01,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 893630271317611604, guid: 31810e6a96c276145af6ca7e4fe55c01,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1535,8 +1540,35 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8500035800808049087, guid: 31810e6a96c276145af6ca7e4fe55c01,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8742305570997131902, guid: 31810e6a96c276145af6ca7e4fe55c01,
+        type: 3}
+      propertyPath: m_ClearFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8742305570997131902, guid: 31810e6a96c276145af6ca7e4fe55c01,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8742305570997131902, guid: 31810e6a96c276145af6ca7e4fe55c01,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.8117647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8742305570997131902, guid: 31810e6a96c276145af6ca7e4fe55c01,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.68235296
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8500035800808049087, guid: 31810e6a96c276145af6ca7e4fe55c01, type: 3}
+    - {fileID: 701082955623151560, guid: 31810e6a96c276145af6ca7e4fe55c01, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6733888560633192103, guid: 31810e6a96c276145af6ca7e4fe55c01,
@@ -1658,7 +1690,7 @@ MonoBehaviour:
   DialogCode: PEAR-21-
   DialoguePanel: {fileID: 1917509471}
   DialogueText: {fileID: 1152277136}
-  CantDialog: 7
+  CantDialog: 8
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -17,14 +17,6 @@ public class MejorAmigoPrimeraVez : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        //Inicia el dialogo
-        //Fin del dialogo
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            dialogDone = true;
-        }
-
         //Si no se ha completado la primera parte de la historia
         if (EventManager.ValidarEvento("INI-22-00"))
         {

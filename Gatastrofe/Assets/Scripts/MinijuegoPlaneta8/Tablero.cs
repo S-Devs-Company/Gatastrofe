@@ -2,39 +2,41 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 
 public class Tablero : MonoBehaviour
 {
+    // Elementos del tablero en la vista
     public Ecuacion ecuacion1;
     public Ecuacion ecuacion2;
     public Ecuacion ecuacion3;
     public Ecuacion ecuacion4;
     public Teclado teclado;
+    public TextMeshProUGUI intentosTexto;
 
+    // Lista donde se guardan las ecuaciones del tablero
     public ListaDobleEnlazada ecuaciones;
 
-
-
-    public Tablero()
-    {
-        ecuaciones = new ListaDobleEnlazada();
-    }
+    private int intentos;
 
     // Start is called before the first frame update
     void Start()
     {
+        intentos = 1;
+        ecuaciones = new ListaDobleEnlazada();
         GenerarTablero();
         GenerarTeclado();
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        intentosTexto.text = Convert.ToString(intentos);
     }
 
+    // Metodo para generar las ecuaciones del tablero y mostrarlas
     public void GenerarTablero()
     {
         ecuaciones.AgregarElemento(ecuacion1);
@@ -48,21 +50,13 @@ public class Tablero : MonoBehaviour
         }
     }
 
+    // Función para obtener una ecuación de la lista
     public Ecuacion GetEcuacion(int index)
     {
         return ecuaciones.GetElemento(index).GetDato();
     }
 
-    public string[][] MostrarTablero()
-    {
-        string[][] tablero = new string[4][];
-        for (int i = 1; i <= 4; i++)
-        {
-            tablero[i - 1] = GetEcuacion(i).MostrarEcuacion();
-        }
-        return tablero;
-    }
-
+    // Función para resolver las ecuaciones del tablero
     public bool ResolverTablero()
     {
         if (GetEcuacion(1).Resolver())
@@ -81,6 +75,28 @@ public class Tablero : MonoBehaviour
         return false;
     }
 
+    public void IntentarResolver()
+    {
+        if (intentos < 3)
+        {
+            if (ResolverTablero())
+            {
+                EventManager.ModificarEstadoEvento("PMJ-32-00", 1);
+                EventManager.ModificarEstadoEvento("NAV-41-00", 1);
+                SceneManagerScript.CargarEscena("Scenes/3.1. Planeta8Jugable");
+            }
+            else
+            {
+                intentos++;
+            }
+        }
+        else
+        {
+            SceneManagerScript.CargarEscena("Scenes/3.1. Planeta8Jugable");
+        }
+    }
+
+    // Metodo para pintar el tablero dependiendo de si se resolvieron las ecuaciones o no
     public void PintarTablero()
     {
         for (int i = 1; i <= 4; i++)
@@ -89,6 +105,7 @@ public class Tablero : MonoBehaviour
         }
     }
 
+    // Metodo para generar el teclado de opciones con las ecuaciones
     public void GenerarTeclado()
     {
         List<string> textoTeclado = new List<string>();
@@ -115,5 +132,5 @@ public class Tablero : MonoBehaviour
         textoTeclado = textoTeclado.OrderBy(item => random.Next()).ToList();
         teclado.GenerarTeclado(textoTeclado);
     }
-    
+
 }

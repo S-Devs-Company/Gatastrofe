@@ -16,7 +16,6 @@ public class SeleccionadorRespuesta : MonoBehaviour
         }
         SeleccionadorRespuesta.incognita = gameObject.GetComponentInChildren<TextMeshProUGUI>();
         incognita.GetComponentInParent<Image>().color = Color.cyan;
-        Debug.Log(incognita.text);   
     }
 
     public void Responder()
@@ -24,9 +23,8 @@ public class SeleccionadorRespuesta : MonoBehaviour
         if (SeleccionadorRespuesta.incognita != null)
         {
             incognita.GetComponentInParent<Image>().color = Color.white;
-            Debug.Log(gameObject.GetComponentInChildren<TextMeshProUGUI>().text);
             incognita.SetText(gameObject.GetComponentInChildren<TextMeshProUGUI>().text);
         }
     }
-    
+
 }
