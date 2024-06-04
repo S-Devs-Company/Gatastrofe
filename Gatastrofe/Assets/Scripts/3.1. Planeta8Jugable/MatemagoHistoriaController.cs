@@ -23,6 +23,10 @@ public class MatemagoHistoriaController : MonoBehaviour
         {
             dialogController.DialogCode = "PMAT-31-";
             dialogController.CantDialog = 3;
+            if (dialogController.finishedTalking)
+            {
+                EventManager.ModificarEstadoEvento("PMJ-31-00", 1);
+            }
         }
         else if (EventManager.ValidarEvento("PMJ-31-01"))
         {
@@ -35,12 +39,8 @@ public class MatemagoHistoriaController : MonoBehaviour
             npcController.enabled = true;
             npcController.DialogCode = "PMAT-NPC-";
             npcController.CantDialog= 2;
-
         }
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        EventManager.ModificarEstadoEvento("PMJ-31-00", 1);
-    }
+   
 }

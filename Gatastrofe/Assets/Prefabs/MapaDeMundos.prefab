@@ -119,7 +119,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 723614078802457657}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8895657168302986942, guid: 81b26820c4278a04b901961d403c4026,
+          type: 3}
+        m_TargetAssemblyTypeName: NaveProtaController, Assembly-CSharp
+        m_MethodName: IniciarViaje
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: PMAT
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1954600851337822335
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,7 +252,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1302270427301005729}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8895657168302986942, guid: 81b26820c4278a04b901961d403c4026,
+          type: 3}
+        m_TargetAssemblyTypeName: NaveProtaController, Assembly-CSharp
+        m_MethodName: IniciarViaje
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: PFIS
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3491474635904571564
 GameObject:
   m_ObjectHideFlags: 0
@@ -359,7 +385,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3024497036998341730}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8895657168302986942, guid: 81b26820c4278a04b901961d403c4026,
+          type: 3}
+        m_TargetAssemblyTypeName: NaveProtaController, Assembly-CSharp
+        m_MethodName: IniciarViaje
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: PGEO
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4694963362415391384
 GameObject:
   m_ObjectHideFlags: 0
@@ -479,7 +518,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7869810543329444036}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8895657168302986942, guid: 81b26820c4278a04b901961d403c4026,
+          type: 3}
+        m_TargetAssemblyTypeName: NaveProtaController, Assembly-CSharp
+        m_MethodName: IniciarViaje
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: PTIE
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4982409713981281016
 GameObject:
   m_ObjectHideFlags: 0
@@ -599,7 +651,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4270057228421244932}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8895657168302986942, guid: 81b26820c4278a04b901961d403c4026,
+          type: 3}
+        m_TargetAssemblyTypeName: NaveProtaController, Assembly-CSharp
+        m_MethodName: IniciarViaje
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: PEST
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5855777353484863212
 GameObject:
   m_ObjectHideFlags: 0
