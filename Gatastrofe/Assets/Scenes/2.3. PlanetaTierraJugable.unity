@@ -1589,6 +1589,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1341699808}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1341699811 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6733888560633192103, guid: 31810e6a96c276145af6ca7e4fe55c01,
+    type: 3}
+  m_PrefabInstance: {fileID: 1341699808}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1527006807 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ade0bd069b0624a40a20176a7b6777d3,
@@ -1607,7 +1613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77f140cbaf230ce4093ace80faf0eb5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1341699811}
 --- !u!64 &1527006809
 MeshCollider:
   m_ObjectHideFlags: 0

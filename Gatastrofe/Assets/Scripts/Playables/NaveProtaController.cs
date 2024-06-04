@@ -18,6 +18,7 @@ public class NaveProtaController : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Playable.canFly = true;
+        ValidarPlanetas();
     }
 
     private void OnTriggerExit(Collider other)
@@ -27,6 +28,7 @@ public class NaveProtaController : MonoBehaviour
 
     public void IniciarViaje(string codigoDePlaneta)
     {
+        Debug.Log("Volando");
         if (codigoDePlaneta.Equals("PTIE"))
         {
             SceneManagerScript.CargarEscena("Scenes/2.3. PlanetaTierraJugable");
@@ -63,6 +65,7 @@ public class NaveProtaController : MonoBehaviour
 
     public static void ValidarPlanetas()
     {
+        Debug.Log("Validando");
         //Si evento nav es 1
         if (!EventManager.ValidarEvento("NAV-23-00"))
         {
@@ -108,6 +111,7 @@ public class NaveProtaController : MonoBehaviour
 
     public void CloseMap()
     {
+        Debug.Log("Cerrando");
         mapa.SetActive(false);
         btnMapa.SetActive(false);
         Playable.canPlay = true;
