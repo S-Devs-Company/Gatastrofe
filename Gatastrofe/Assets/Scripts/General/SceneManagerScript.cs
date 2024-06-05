@@ -34,17 +34,7 @@ public class SceneManagerScript : MonoBehaviour
                 CargarEscena("Scenes/2.3. PlanetaTierraJugable");
             }
         }
-        else if (CurrentScene == SceneManager.GetSceneByName("Scenes/2.2. BasureroJugable").buildIndex)
-        {
-
-        }
-        else if (CurrentScene == SceneManager.GetSceneByName("Scenes/2.3. PlanetaTierraJugable").buildIndex)
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                CargarEscena("Scenes/3.1. Planeta8Jugable");
-            }
-        }
+        
     }
 
     public static void CargarEscena(String escena)
