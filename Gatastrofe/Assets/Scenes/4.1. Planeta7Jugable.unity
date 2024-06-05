@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -220,22 +220,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.0101762, y: 6.6757913, z: 3.0693054}
   m_Center: {x: -0.05912319, y: 3.1335094, z: -0.029559135}
---- !u!114 &320690750
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 320690745}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f89f502874bf12449b96336174f402a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hasPhysics: 1
-  forceMultiplier: 5
-  minDragDistance: 0.1
-  cam: {fileID: 0}
 --- !u!1 &325794171
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,10 +532,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 669917802}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 039ee1125cb3fb845b8b78369bab1d7f,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 669917804}
   m_SourcePrefab: {fileID: 100100000, guid: 039ee1125cb3fb845b8b78369bab1d7f, type: 3}
 --- !u!1 &669917801 stripped
 GameObject:
@@ -607,22 +587,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 114
   m_CollisionDetection: 1
---- !u!114 &669917804
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 669917801}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f89f502874bf12449b96336174f402a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hasPhysics: 1
-  forceMultiplier: 1
-  minDragDistance: 0.1
-  cam: {fileID: 0}
 --- !u!1001 &712426082
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1470,10 +1434,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1277009077}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 78727adae1698b24a8880c08832ce74b,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1277009079}
   m_SourcePrefab: {fileID: 100100000, guid: 78727adae1698b24a8880c08832ce74b, type: 3}
 --- !u!1 &1277009076 stripped
 GameObject:
@@ -1529,22 +1489,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.0101762, y: 6.6757913, z: 3.0693054}
   m_Center: {x: -0.05912319, y: 3.1335094, z: -0.029559135}
---- !u!114 &1277009079
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1277009076}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f89f502874bf12449b96336174f402a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hasPhysics: 1
-  forceMultiplier: 1
-  minDragDistance: 0.1
-  cam: {fileID: 0}
 --- !u!1001 &1579284381
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1645,10 +1589,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 320690746}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 78727adae1698b24a8880c08832ce74b,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 320690750}
   m_SourcePrefab: {fileID: 100100000, guid: 78727adae1698b24a8880c08832ce74b, type: 3}
 --- !u!1001 &1579405661
 PrefabInstance:
@@ -1992,10 +1932,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1847705594}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 039ee1125cb3fb845b8b78369bab1d7f,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1847705596}
   m_SourcePrefab: {fileID: 100100000, guid: 039ee1125cb3fb845b8b78369bab1d7f, type: 3}
 --- !u!1 &1847705593 stripped
 GameObject:
@@ -2051,22 +1987,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 114
   m_CollisionDetection: 1
---- !u!114 &1847705596
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1847705593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f89f502874bf12449b96336174f402a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hasPhysics: 1
-  forceMultiplier: 1
-  minDragDistance: 0.1
-  cam: {fileID: 0}
 --- !u!1001 &1945576851
 PrefabInstance:
   m_ObjectHideFlags: 0
