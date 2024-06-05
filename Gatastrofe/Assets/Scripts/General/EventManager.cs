@@ -1,6 +1,8 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Threading;
 using UnityEngine;
 
 public class EventManager : MonoBehaviour
@@ -67,5 +69,9 @@ public class EventManager : MonoBehaviour
                 writer.WriteLine(entry.Key + "," + 0);
             }
         }
+        EventDictionary.Clear();
+        LeerArchivo();
+        SceneManagerScript.CargarEscena("Scenes/2.1. PlanetaTierraTutorial");
     }
+
 }

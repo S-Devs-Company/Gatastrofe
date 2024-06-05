@@ -48,4 +48,20 @@ public class SceneManagerScript : MonoBehaviour
         SceneManager.LoadScene(escena);
         CurrentScene = escena;
     }
+
+    public static void CargarMinijuego()
+    {
+        if (SceneManager.GetActiveScene().name.Equals("4.1. Planeta7Jugable"))
+        {
+            CargarEscena("Scenes/4.2. MinijuegoPlaneta7");
+        }
+        else if (SceneManager.GetActiveScene().name.Equals("5.1. Planeta6Jugable"))
+        {
+            CargarEscena("Scenes/5.2. MinijuegoPlaneta6");
+        }
+        else if (SceneManager.GetActiveScene().name.Equals("6.1. Planeta5Jugable"))
+        {
+            CargarEscena("Scenes/6.2. MinijuegoPlaneta5");
+        }
+    }
 }

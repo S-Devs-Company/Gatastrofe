@@ -7,6 +7,7 @@ public class ManagerPantallaInicio : MonoBehaviour
     [SerializeField] GameObject PanelConfirmacion;
     [SerializeField] GameObject Creditos;
     [SerializeField] GameObject Opciones;
+    [SerializeField] GameObject BotonCreditos;
 
     public void OpenPanelConfirmacion()
     {
@@ -21,13 +22,13 @@ public class ManagerPantallaInicio : MonoBehaviour
     public void OpenCreditos()
     {
         Creditos.SetActive(true);
-        GameObject.Find("BtnCreditos").SetActive(false);
+        BotonCreditos.SetActive(false);
     }
 
     public void CloseCreditos()
     {
         Creditos.SetActive(false);
-        GameObject.Find("BtnCreditos").SetActive(true);
+        BotonCreditos.SetActive(true);
     }
 
     public void OpenOpciones()
