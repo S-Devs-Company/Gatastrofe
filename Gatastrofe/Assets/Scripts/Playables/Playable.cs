@@ -24,7 +24,7 @@ public class Playable : MonoBehaviour
     {
         if (canFly) {
             GameObject nave = GameObject.Find("NaveProtagonista");
-            gameObject.transform.position = new Vector3(nave.transform.position.x-1,0,nave.transform.position.z-1);
+            gameObject.transform.position = new Vector3(nave.transform.position.x-1,nave.gameObject.transform.position.y,nave.transform.position.z-1);
         }
         animator = GetComponentInChildren<Animator>();
         boxCollider = prota.GetComponent<BoxCollider>();

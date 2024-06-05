@@ -58,4 +58,14 @@ public class EventManager : MonoBehaviour
         return (EventDictionary[codigoEvt] == 0);
     }
 
+    public void ReiniciarEventos()
+    {
+        using (StreamWriter writer = new StreamWriter(ruta))
+        {
+            foreach (var entry in EventDictionary)
+            {
+                writer.WriteLine(entry.Key + "," + 0);
+            }
+        }
+    }
 }
