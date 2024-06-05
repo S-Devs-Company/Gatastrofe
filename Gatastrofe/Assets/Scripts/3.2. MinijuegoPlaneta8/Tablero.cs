@@ -33,7 +33,7 @@ public class Tablero : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        intentosTexto.text = Convert.ToString(intentos);
+        intentosTexto.text = intentos + "/3";
     }
 
     // Metodo para generar las ecuaciones del tablero y mostrarlas
