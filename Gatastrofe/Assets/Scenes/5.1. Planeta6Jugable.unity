@@ -1075,6 +1075,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 5804108233347159905}
+    - targetCorrespondingSourceObject: {fileID: 2508671781326805659, guid: dac39ef4f87b1314887bd1577670d624,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5804108233347159906}
+    - targetCorrespondingSourceObject: {fileID: 2508671781326805659, guid: dac39ef4f87b1314887bd1577670d624,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5804108233347159907}
   m_SourcePrefab: {fileID: 100100000, guid: dac39ef4f87b1314887bd1577670d624, type: 3}
 --- !u!1 &5804108233347159904 stripped
 GameObject:
@@ -1100,6 +1108,35 @@ MonoBehaviour:
   PanelInstrucciones: {fileID: 1698181203}
   DialogueText: {fileID: 1698181202}
   CantDialog: 3
+--- !u!114 &5804108233347159906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5804108233347159904}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e6cc76379806b149a772e2e0e78489d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogCode: PEST-52-
+  DialoguePanel: {fileID: 1698181204}
+  PanelInstrucciones: {fileID: 1698181203}
+  DialogueText: {fileID: 1698181202}
+  CantDialog: 2
+--- !u!114 &5804108233347159907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5804108233347159904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfb38b826272a0f49a03504747ad4681, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8490813510836915255
 PrefabInstance:
   m_ObjectHideFlags: 0
