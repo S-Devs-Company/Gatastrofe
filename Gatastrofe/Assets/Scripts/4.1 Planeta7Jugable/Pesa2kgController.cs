@@ -46,7 +46,7 @@ public class Pesa2kgController : MonoBehaviour
             npcDialogController.enabled = true;
             npcDialogController.DialogCode = "PFIS-NPC-";
             npcDialogController.CantDialog = 2;
-            EventManager.ModificarEstadoEvento("NAV-61-00", 1);
+            EventManager.ModificarEstadoEvento("NAV-51-00", 1);
         }
     }
 }
