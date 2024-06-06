@@ -34,18 +34,12 @@ EditorBuildSettings:
     guid: 18afcd69220720248878bc1a6bac85ab
   - enabled: 1
     path: Assets/Scenes/5.1. Planeta6Jugable.unity
-    guid: fc6d5af85bcdfa0439acc34124d7ed0c
-  - enabled: 1
-    path: Assets/Scenes/5.2. MinijuegoPlaneta6.unity
-    guid: e1386384e94d09b4d9752645aea91e4f
-  - enabled: 1
-    path: Assets/Scenes/6.1. Planeta5Jugable.unity
     guid: aa1ad8843c4bfa34d8f94592c48e80f5
   - enabled: 1
-    path: Assets/Scenes/6.2. MinijuegoPlaneta5.unity
+    path: Assets/Scenes/5.2. MinijuegoPlaneta6.unity
     guid: ad96c4dce1ea81e4da8f2eef9e67b0a1
   - enabled: 1
-    path: Assets/Scenes/7. CinematicaFinDelJuego.unity
+    path: Assets/Scenes/6. CinematicaFinDelJuego.unity
     guid: 633f7b6bf42441348a0595b2500f472e
   - enabled: 1
     path: Assets/Scenes/FlappyShip.unity

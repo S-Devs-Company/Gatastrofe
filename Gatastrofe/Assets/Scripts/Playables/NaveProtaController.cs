@@ -52,27 +52,12 @@ public class NaveProtaController : MonoBehaviour
             ViajeroController.planetaDestino = "Scenes/4.1. Planeta7Jugable";
             //GameObject.Find("prota").transform = ;
         }
-        else if (codigoDePlaneta.Equals("PEST"))
-        {
-            //SceneManagerScript.CargarEscena("Scenes/5.1. Planeta6Jugable");
-            SceneManagerScript.CargarEscena("Scenes/FlappyShip");
-            ViajeroController.planetaDestino = "Scenes/5.1. Planeta6Jugable";
-            //GameObject.Find("prota").transform = ;
-        }
         else if (codigoDePlaneta.Equals("PGEO"))
         {
             //SceneManagerScript.CargarEscena("Scenes/6.1. Planeta5Jugable");
             SceneManagerScript.CargarEscena("Scenes/FlappyShip");
-            ViajeroController.planetaDestino = "Scenes/6.1. Planeta5Jugable";
+            ViajeroController.planetaDestino = "Scenes/5.1. Planeta6Jugable";
             //GameObject.Find("prota").transform = ;
-        }
-        else if (codigoDePlaneta.Equals("123"))
-        {
-            Debug.Log("No me mires, yo si funciono");
-        }
-        else
-        {
-            Debug.Log("Nais, aqui nos quedamos");
         }
         Playable.canFly = false;
         Playable.canPlay = true;
@@ -105,21 +90,13 @@ public class NaveProtaController : MonoBehaviour
         {
             GameObject.Find("Player").transform.GetChild(1).GetChild(0).GetChild(0).GetChild(4).gameObject.GetComponent<Button>().interactable = false;
         }//Si evento nav es 1
-        if (!EventManager.ValidarEvento("NAV-51-00"))
+        if (!EventManager.ValidarEvento("NAV-61-00"))
         {
             GameObject.Find("Player").transform.GetChild(1).GetChild(0).GetChild(0).GetChild(5).gameObject.GetComponent<Button>().interactable = true;
         }
         else
         {
             GameObject.Find("Player").transform.GetChild(1).GetChild(0).GetChild(0).GetChild(5).gameObject.GetComponent<Button>().interactable = false;
-        }//Si evento nav es 1
-        if (!EventManager.ValidarEvento("NAV-61-00"))
-        {
-            GameObject.Find("Player").transform.GetChild(1).GetChild(0).GetChild(0).GetChild(6).gameObject.GetComponent<Button>().interactable = true;
-        }
-        else
-        {
-            GameObject.Find("Player").transform.GetChild(1).GetChild(0).GetChild(0).GetChild(6).gameObject.GetComponent<Button>().interactable = false;
         }
     }
 

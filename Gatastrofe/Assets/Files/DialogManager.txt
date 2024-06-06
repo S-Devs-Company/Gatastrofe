@@ -38,17 +38,6 @@ PFIS-42-2;Hombre Pesa: Si claro, pero apenas vieron la lluvia de meteoritos se f
 PFIS-42-3;Hombre Pesa: Perdón por no poder ayudar más. Toma un poco de gasolina y buen viaje.
 PFIS-NPC-1;Tu: Nos has salvado, estamos agradecidos.
 PFIS-NPC-2;Tu: Algún día me caerá una manzana en la cabeza y seré Newton.
-PEST-51-1;Tu: Hola, mi nave está fallando, ¿podrías ayudarme? 
-PEST-51-2;Tu: Debo seguir con la búsqueda de mi gato. Unos comerciantes lo secuestraron.
-PEST-51-3;Juan Mecanico: Claro que puedo ayudar, pero necesito que tu me ayudes primero.
-PEST-51-4;Juan Mecanico: Mi sueño siempre ha sido estar a la moda, pero no tengo idea como. 
-PEST-51-5;Juan Mecanico: Si me ayudas a descubrirlo, repararé tu nave.
-PEST-51-6;Tu: Claro, eso haré.
-PEST-52-1;Tu: Hola, he descubierto cual es la moda: Son los
-PEST-52-2;Juan Mecanico: Muchas gracias, tu nave ya está reparada. Suerte en tu búsqueda.
-PEST-53-1;Juan Mecanico: Siempre me gustaron los sombreros.
-PEST-NPC-1;Ciudadano: Estadísticamente somos ciudadanos del planeta estadística.
-PEST-NPC-2;Cuidadano: Tu gato es muy cool, cuando lo vi estaba a la moda.
 PGEO-61-1;Hombre Cubo: Acabas de destruir nuestro planeta
 PGEO-61-2;Hombre Cubo: La única forma que salgas de aquí es que reconstruyas todo… O a la cárcel.
 PGEO-61-3;Tu: No se preocupen, lo reconstruiré.
