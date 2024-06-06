@@ -84,7 +84,7 @@ public class Ecuacion : MonoBehaviour
                 resultado = numero1 - numero2;
                 break;
             case 3:
-                operacion = '*';
+                operacion = 'X';
                 resultado = numero1 * numero2;
                 break;
             case 4:
@@ -129,7 +129,7 @@ public class Ecuacion : MonoBehaviour
                         case '-':
                             return int.Parse(num1.GetParsedText()) - numero2 == resultado;
 
-                        case '*':
+                        case 'X':
                             return int.Parse(num1.GetParsedText()) * numero2 == resultado;
                         case '/':
                             return int.Parse(num1.GetParsedText()) / numero2 == resultado;
@@ -146,7 +146,7 @@ public class Ecuacion : MonoBehaviour
                         case '-':
                             return (numero1 - numero2) == resultado;
 
-                        case '*':
+                        case 'X':
                             return (numero1 * numero2) == resultado;
                         case '/':
                             return (numero1 / numero2) == resultado;
@@ -162,7 +162,7 @@ public class Ecuacion : MonoBehaviour
                             return numero1 + int.Parse(num2.GetParsedText()) == resultado;
                         case '-':
                             return numero1 - int.Parse(num2.GetParsedText()) == resultado;
-                        case '*':
+                        case 'X':
                             return numero1 * int.Parse(num2.GetParsedText()) == resultado;
                         case '/':
                             return numero1 / int.Parse(num2.GetParsedText()) == resultado;

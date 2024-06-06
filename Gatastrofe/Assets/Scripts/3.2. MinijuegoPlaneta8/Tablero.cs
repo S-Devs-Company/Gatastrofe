@@ -112,7 +112,7 @@ public class Tablero : MonoBehaviour
     {
         List<string> textoTeclado = new List<string>();
         HashSet<string> opcionesTeclado = new HashSet<string>();
-        List<char> posiblesOpciones = new List<char> { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '+', '-', '*', '/' };
+        List<char> posiblesOpciones = new List<char> { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '+', '-', 'X', '/' };
         List<string> incognitas = new List<string>();
         for (int i = 1; i <= 4; i++)
         {

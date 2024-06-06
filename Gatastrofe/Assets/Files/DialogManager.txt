@@ -39,7 +39,7 @@ PFIS-NPC-1;-Nos has salvado, estamos agradecidos.
 PFIS-NPC-2;-Algún día me caerá una manzana en la cabeza y seré Newton.
 PEST-51-1;-Hola, mi nave está fallando, ¿podrías ayudarme? Debo seguir con la búsqueda de mi gato. Unos comerciantes lo secuestraron.
 PEST-51-2;Mecanico: Claro que puedo ayudar, pero necesito que tu me ayudes primero. Mi sueño siempre ha sido estar a la moda, pero no tengo idea como. Si me ayudas a descubrirlo, repararé tu nave.
-PEST-51-02;-Claro, eso haré.
+PEST-51-3;-Claro, eso haré.
 PEST-52-1;-Hola, he descubierto cual es la moda: son los __________.
 PEST-52-2;Muchas gracias, tu nave ya está reparada. Mucha suerte en tu búsqueda.
 PEST-NPC-1;-Estadísticamente somos ciudadanos del planeta estadística.
