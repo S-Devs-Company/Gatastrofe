@@ -818,6 +818,16 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 793858793225189582, guid: 31810e6a96c276145af6ca7e4fe55c01,
+        type: 3}
+      propertyPath: m_text
+      value: '- Presiona ''E'' para itnteractuar con personas y objetos.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4238966560048551115, guid: 31810e6a96c276145af6ca7e4fe55c01,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6733888560633192103, guid: 31810e6a96c276145af6ca7e4fe55c01,
         type: 3}
       propertyPath: m_Name
