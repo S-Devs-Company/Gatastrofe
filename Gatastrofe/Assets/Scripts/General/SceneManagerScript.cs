@@ -1,7 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -58,10 +55,6 @@ public class SceneManagerScript : MonoBehaviour
         else if (SceneManager.GetActiveScene().name.Equals("5.1. Planeta6Jugable"))
         {
             CargarEscena("Scenes/5.2. MinijuegoPlaneta6");
-        }
-        else if (SceneManager.GetActiveScene().name.Equals("6.1. Planeta5Jugable"))
-        {
-            CargarEscena("Scenes/6.2. MinijuegoPlaneta5");
         }
     }
 }
