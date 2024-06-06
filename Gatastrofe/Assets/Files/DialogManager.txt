@@ -33,20 +33,25 @@ PMAT-35-1;Príncipe Gauss: Veo que si eres digno humano. Toma mis herramientas y
 PMAT-NPC-1;MateMago: En cada línea temporal, las ecuaciones de Gauss nos revelan un universo de números esperando ser descubierto.
 PMAT-NPC-2;MateMago: La identidad de Euler une las constantes más fundamentales de la matemática en una sola ecuación, ¡un verdadero tesoro a través del tiempo!
 PFIS-41-1;Hombre Pesa: Ayuda por favor, viene una lluvia de meteoritos. Debes salvarnos. :0
-PFIS-42-1;-Disculpen, me informaron que unos comerciantes pasaron por aquí vendiendo un gato. Ese es mi gato, ellos lo secuestraron.
-PFIS-42-2;Hombre Pesa: Si claro, pero apenas vieron la lluvia de meteoritos se fueron hacia el planeta de la estadística. Perdón por no poder ayudar más. Ten un poco de gasolina y buen viaje.
-PFIS-NPC-1;-Nos has salvado, estamos agradecidos.
-PFIS-NPC-2;-Algún día me caerá una manzana en la cabeza y seré Newton.
-PEST-51-1;-Hola, mi nave está fallando, ¿podrías ayudarme? Debo seguir con la búsqueda de mi gato. Unos comerciantes lo secuestraron.
-PEST-51-2;Mecanico: Claro que puedo ayudar, pero necesito que tu me ayudes primero. Mi sueño siempre ha sido estar a la moda, pero no tengo idea como. Si me ayudas a descubrirlo, repararé tu nave.
-PEST-51-3;-Claro, eso haré.
-PEST-52-1;-Hola, he descubierto cual es la moda: son los __________.
-PEST-52-2;Muchas gracias, tu nave ya está reparada. Mucha suerte en tu búsqueda.
-PEST-NPC-1;-Estadísticamente somos ciudadanos del planeta estadística.
-PEST-NPC-2;-Tu gato es muy cool, cuando lo vi estaba a la moda.
+PFIS-42-1;Tu: Disculpen, me informaron que unos comerciantes pasaron por aquí vendiendo un gato. Ese es mi gato, ellos lo secuestraron.
+PFIS-42-2;Hombre Pesa: Si claro, pero apenas vieron la lluvia de meteoritos se fueron hacia el planeta de la estadística. 
+PFIS-42-3;Hombre Pesa: Perdón por no poder ayudar más. Toma un poco de gasolina y buen viaje.
+PFIS-NPC-1;Tu: Nos has salvado, estamos agradecidos.
+PFIS-NPC-2;Tu: Algún día me caerá una manzana en la cabeza y seré Newton.
+PEST-51-1;Tu: Hola, mi nave está fallando, ¿podrías ayudarme? 
+PEST-51-2;Tu: Debo seguir con la búsqueda de mi gato. Unos comerciantes lo secuestraron.
+PEST-51-3;Juan Mecanico: Claro que puedo ayudar, pero necesito que tu me ayudes primero.
+PEST-51-4;Juan Mecanico: Mi sueño siempre ha sido estar a la moda, pero no tengo idea como. 
+PEST-51-5;Juan Mecanico: Si me ayudas a descubrirlo, repararé tu nave.
+PEST-51-6;Tu: Claro, eso haré.
+PEST-52-1;Tu: Hola, he descubierto cual es la moda: Son los
+PEST-52-2;Juan Mecanico: Muchas gracias, tu nave ya está reparada. Suerte en tu búsqueda.
+PEST-53-1;Juan Mecanico: Siempre me gustaron los sombreros.
+PEST-NPC-1;Ciudadano: Estadísticamente somos ciudadanos del planeta estadística.
+PEST-NPC-2;Cuidadano: Tu gato es muy cool, cuando lo vi estaba a la moda.
 PGEO-61-1;Hombre Cubo: Acabas de destruir nuestro planeta
 PGEO-61-2;Hombre Cubo: La única forma que salgas de aquí es que reconstruyas todo… O a la cárcel.
-PGEO-61-3;-No se preocupen, lo reconstruiré.
+PGEO-61-3;Tu: No se preocupen, lo reconstruiré.
 PGEO-62-1;Hombre Cubo: Maravilloso. Ahora fuera de nuestro planeta. Toma tu nave y por favor no regreses nunca.
-PGEO-NPC-1;-Una vez llego un fulano llamado Steve, confundió el planeta con un lugar extraño llamado Minecraft.
-PGEO-NPC-2;-La geometría es el estudio de las formas de la belleza del Universo.
+PGEO-NPC-1;Ciudadano Geometrico: Una vez llego un fulano llamado Steve, confundió el planeta con un lugar extraño llamado Minecraft.
+PGEO-NPC-2;Ciudadano Geometrico: La geometría es el estudio de las formas de la belleza del Universo.
