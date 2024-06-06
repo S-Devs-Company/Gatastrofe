@@ -18,28 +18,29 @@ public class HabitanteGeoController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (EventManager.ValidarEvento("PGC-61-00"))
+        if (EventManager.ValidarEvento("PGJ-62-00"))
         {
             dialogController.DialogCode = "PGEO-61-";
             dialogController.CantDialog = 3;
             if (dialogController.finishedTalking)
             {
-                EventManager.ModificarEstadoEvento("PGC-61-00", 1);
+                EventManager.ModificarEstadoEvento("PGJ-62-00", 1);
             }
-            else if (EventManager.ValidarEvento("PGC-61-00"))
-            {
-                dialogController.DialogCode = "PGEO-62-";
-                dialogController.CantDialog = 1;
-            }
-            else
-            {
-                dialogController.enabled = false;
-                npcController.enabled = true;
-                npcController.DialogCode = "PGEO-NPC-";
-                npcController.CantDialog = 2;
-            }
-
         }
-        
+        else if (!EventManager.ValidarEvento("PGJ-63-00") && EventManager.ValidarEvento("PGJ-62-01"))
+        {
+            dialogController.DialogCode = "PGEO-62-";
+            dialogController.CantDialog = 1;
+        }
+        else if (!EventManager.ValidarEvento("PGJ-63-00") && !EventManager.ValidarEvento("PGJ-62-01"))
+        {
+            dialogController.enabled = false;
+            npcController.enabled = true;
+            npcController.DialogCode = "PGEO-NPC-";
+            npcController.CantDialog = 2;
+        }
+
     }
+
 }
+
