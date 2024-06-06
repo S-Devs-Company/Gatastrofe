@@ -9,6 +9,9 @@ TagManager:
   - Pick
   - Dialog
   - PuertaBasurero
+  - Limites
+  - Piezas
+  - Casas
   layers:
   - Default
   - TransparentFX
