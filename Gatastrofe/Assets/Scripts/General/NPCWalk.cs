@@ -23,13 +23,21 @@ public class NPCWalk : MonoBehaviour
         {
             if (walkSide == 1) 
             {
-                transform.rotation = Quaternion.Euler(-90f, 0, 0);
+                transform.rotation = Quaternion.Euler(0f, 90f, 0);
             }
             else
             {
-                transform.rotation = Quaternion.Euler(90f, 0, 0);
+                transform.rotation = Quaternion.Euler(0f, -90f, 0);
             }
-            transform.Translate(new Vector3(vel * Time.deltaTime * walkSide,0,0));
+            transform.Translate(new Vector3(vel * Time.deltaTime * walkSide, 0, 0), Space.World);
+        }
+        if (transform.position.x >= 45f)
+        {
+            walkSide = -1;
+        }
+        else if (transform.position.x <= -4f)
+        {
+            walkSide = 1;
         }
     }
 
