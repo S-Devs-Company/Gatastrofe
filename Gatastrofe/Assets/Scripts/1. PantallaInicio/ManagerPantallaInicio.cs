@@ -2,6 +2,7 @@ using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ManagerPantallaInicio : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class ManagerPantallaInicio : MonoBehaviour
     [SerializeField] GameObject Creditos;
     [SerializeField] GameObject Opciones;
     [SerializeField] GameObject BotonCreditos;
+    [SerializeField] Slider SliderVolumen;
 
     public void OpenPanelConfirmacion()
     {
@@ -34,6 +36,7 @@ public class ManagerPantallaInicio : MonoBehaviour
 
     public void OpenOpciones()
     {
+        SliderVolumen.value = SoundManager.volumen;
         Opciones.SetActive(true);
     }
 
