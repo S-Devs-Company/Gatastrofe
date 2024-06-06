@@ -21,7 +21,7 @@ public class StoryDialogController : MonoBehaviour
         }
     }
 
-    // Función que inicia el dialogo del NPC de la historia
+    // Funciï¿½n que inicia el dialogo del NPC de la historia
     private void StartDialogue()
     {
         finishedTalking = false;
@@ -35,7 +35,7 @@ public class StoryDialogController : MonoBehaviour
         ShowDialogues();
     }
 
-    // Función para saber cuando el NPC de la historia tiene que hablar con el jugador
+    // Funciï¿½n para saber cuando el NPC de la historia tiene que hablar con el jugador
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -52,13 +52,13 @@ public class StoryDialogController : MonoBehaviour
         }
     }
 
-    // Función que coloca la linea de dialogo en el Texto
+    // Funciï¿½n que coloca la linea de dialogo en el Texto
     private void ShowLine(string line)
     {
         DialogueText.text = line;
     }
 
-    // Función que muestra los dialogos
+    // Funciï¿½n que muestra los dialogos
     private void ShowDialogues()
     {
         ShowLine(DialogManager.ObtenerDialogo(DialogCode + counter));
@@ -91,6 +91,7 @@ public class StoryDialogController : MonoBehaviour
             }
             else
             {
+               
                 Playable.canPlay = true;
                 Playable.isTalking = false;
             }

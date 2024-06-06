@@ -6,6 +6,7 @@ public class Pesa2kgController : MonoBehaviour
 {
     StoryDialogController storyDialogController;
     NpcDialogController npcDialogController;
+    [SerializeField] public GameObject instruccionesMiniJuego;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +27,8 @@ public class Pesa2kgController : MonoBehaviour
             if (storyDialogController.finishedTalking)
             {
                 EventManager.ModificarEstadoEvento("PFJ-41-00", 1);
-                SceneManagerScript.CargarEscena("Scenes/4.2. MinijuegoPlaneta7");
+                instruccionesMiniJuego.SetActive(true);
+                
             }
         }
         else if (!EventManager.ValidarEvento("PFJ-42-00") && EventManager.ValidarEvento("PFJ-41-01"))

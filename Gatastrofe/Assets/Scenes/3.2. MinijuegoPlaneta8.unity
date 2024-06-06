@@ -1211,7 +1211,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24.55
+  m_fontSize: 30
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4589,6 +4589,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3302122473805252135, guid: 4c48f700b935147458b40a50ef26aab5,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -16
+      objectReference: {fileID: 0}
+    - target: {fileID: 3302122473805252135, guid: 4c48f700b935147458b40a50ef26aab5,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -110
+      objectReference: {fileID: 0}
     - target: {fileID: 4805546029992198888, guid: 4c48f700b935147458b40a50ef26aab5,
         type: 3}
       propertyPath: m_text
@@ -4601,6 +4611,11 @@ PrefabInstance:
 
         - Puedes cambiar tu seleccion'
       objectReference: {fileID: 0}
+    - target: {fileID: 4805546029992198888, guid: 4c48f700b935147458b40a50ef26aab5,
+        type: 3}
+      propertyPath: m_margin.w
+      value: 94.70135
+      objectReference: {fileID: 0}
     - target: {fileID: 6259065290081577341, guid: 4c48f700b935147458b40a50ef26aab5,
         type: 3}
       propertyPath: m_Name
@@ -4608,8 +4623,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6646450198565353801, guid: 4c48f700b935147458b40a50ef26aab5,
         type: 3}
+      propertyPath: m_margin.w
+      value: -203.72504
+      objectReference: {fileID: 0}
+    - target: {fileID: 6646450198565353801, guid: 4c48f700b935147458b40a50ef26aab5,
+        type: 3}
       propertyPath: m_margin.x
-      value: 294.80307
+      value: 402.91403
+      objectReference: {fileID: 0}
+    - target: {fileID: 6646450198565353801, guid: 4c48f700b935147458b40a50ef26aab5,
+        type: 3}
+      propertyPath: m_margin.y
+      value: 232.94655
+      objectReference: {fileID: 0}
+    - target: {fileID: 6646450198565353801, guid: 4c48f700b935147458b40a50ef26aab5,
+        type: 3}
+      propertyPath: m_margin.z
+      value: -414.14563
       objectReference: {fileID: 0}
     - target: {fileID: 6646450198565353801, guid: 4c48f700b935147458b40a50ef26aab5,
         type: 3}
