@@ -25,7 +25,7 @@ public class MinijuegoPlaneta7Controller : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        tiempoRestante.text = "Lluvia de meteoritos acaba en "+Convert.ToInt64(tiempoMinijuego - timer).ToString()+"s";
+        tiempoRestante.text = "La lluvia de meteoritos acaba en "+Convert.ToInt64(tiempoMinijuego - timer).ToString()+"s";
         textoVidas.text = "Vidas restantes " + (vidasGastadas - vidasMax) + "/3";
         barraDeProgreso.value = (tiempoMinijuego - timer) / tiempoMinijuego;
         if (timer > tiempoMinijuego)

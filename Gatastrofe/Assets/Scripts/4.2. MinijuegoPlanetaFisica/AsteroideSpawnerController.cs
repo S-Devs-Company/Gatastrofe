@@ -32,7 +32,7 @@ public class AsteroideSpawnerController : MonoBehaviour
         timer += Time.deltaTime;
         if (7 > timer)
         {
-            targetsAdvertencias[opcion].GetComponentInChildren<TextMeshProUGUI>().text = "Choque en " + Convert.ToInt64(7 - timer) + " s..";
+            targetsAdvertencias[opcion].GetComponentInChildren<TextMeshProUGUI>().text = Convert.ToInt64(7 - timer) + " s...";
         }
         else
         {
