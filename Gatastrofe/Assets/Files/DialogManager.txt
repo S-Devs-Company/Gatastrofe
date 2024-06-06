@@ -1,0 +1,46 @@
+PEAR-21-1;HJ: ¿Qué fue eso?
+PEAR-21-2;Tu: Unos extraterrestres secuestraron a mi gato.
+PEAR-21-3;HJ: ¿QUE? ¿Y qué vas a hacer?
+PEAR-21-4;Tu: Ni idea la verdad.
+PEAR-21-5;HJ: Mira, cuando despegaron se les cayó su mapa.
+PEAR-21-6;HJ: ...
+PEAR-21-7;HJ: ¿Y si le dices al científico loco que te construya una nave? Él vive en la plaza central. Seguro te ayuda.
+PEAR-21-8;Tu: Eso haré.
+PEAR-22-1;Tu: Hola, disculpe, un extraterrestre acaba de secuestrar a mi gato :C. Mi amigo dice que usted me pude ayudar a construir una nave.
+PEAR-22-2;Científico Loco: Si, claro, solo necesito que deposites $10M y lo construiré enseguida.
+PEAR-22-3;Tu: Disculpa, no tengo el dinero...
+PEAR-22-4;Científico Loco: O... Puedes ver qué encuentras en el basurero y con gusto te ayudo.
+PEAR-22-5;Tu: Vale, enseguida.
+PEAR-23-1;Científico Loco: ¿Ya tienes todo?
+PEAR-23-2;Tu: Completo.
+PEAR-23-3;Científico Loco: Listo, mañana mismo estará construida tu nave.
+PEAR-NPC1-1;HJ: A veces quisiera ser una mariposa y volar hasta el final del Universo.
+PEAR-NPC1-2;HJ: Espero que recuperes a tu gato, después de todo un gato es un familiar más.
+PEAR-NPC2-1;Cientifico loco: Buena suerte en tu viaje... Si es que despegas...
+PEAR-NPC2-2;Cientifico loco: De hecho... No sé, me olvidé.
+PMAT-31-1;MateMago: ¿Qué pasó? ¿Estás bien?
+PMAT-31-2;Tu: Ayuda por favor, unos extraterrestres secuestraron a mi gato y encontré este planeta en su mapa. ¿Sabes algo?
+PMAT-31-3;MateMago: Ah sí. Unos comerciantes aterrizaron ayer. Podrías hablar con nuestro príncipe: Gauss. Seguro él te puede ayudar.
+PMAT-32-1;MateMago: Habla con nuestro principe: Gauss. Seguro él te puede ayudar.
+PMAT-33-1;Tu: Saludos su majestad Gauss.
+PMAT-33-2;Príncipe Gauss: Saludos, forastero.
+PMAT-33-3;Tu: He venido a solicitar su ayuda. Unos comerciantes secuestraron a mi gato y me informan que han estado por aquí.
+PMAT-33-4;Príncipe Gauss: Claro. Ellos estuvieron aquí. Me ofrecieron a su gato, pero soy alérgico y los rechacé. Vi que fueron en dirección al planeta de la física.
+PMAT-33-5;Tu: Muchas gracias su brillantez. Una última petición: ¿tendrá usted algunas herramientas para reparar mi nave y seguir la búsqueda?
+PMAT-33-6;Príncipe Gauss: Si claro, pero para saber si eres digno de mis herramientas primero debes solucionar estos acertijos… Acercate a la puerta para comenzar.
+PMAT-34-1;Principe Gauss: Prueba que eres digno, solucionando estos acertijos. Acercate a la puerta para comenzar.
+PMAT-35-1;Príncipe Gauss: Veo que si eres digno humano. Toma mis herramientas y ten un buen viaje.
+PMAT-NPC-1;MateMago: En cada línea temporal, las ecuaciones de Gauss nos revelan un universo de números esperando ser descubierto.
+PMAT-NPC-2;MateMago: La identidad de Euler une las constantes más fundamentales de la matemática en una sola ecuación, ¡un verdadero tesoro a través del tiempo!
+PFIS-41-1;Hombre Pesa: Ayuda por favor, viene una lluvia de meteoritos. Debes salvarnos. :0
+PFIS-42-1;Tu: Disculpen, me informaron que unos comerciantes pasaron por aquí vendiendo un gato. Ese es mi gato, ellos lo secuestraron.
+PFIS-42-2;Hombre Pesa: Si claro, pero apenas vieron la lluvia de meteoritos se fueron hacia el planeta de la estadística. 
+PFIS-42-3;Hombre Pesa: Perdón por no poder ayudar más. Toma un poco de gasolina y buen viaje.
+PFIS-NPC-1;Tu: Nos has salvado, estamos agradecidos.
+PFIS-NPC-2;Tu: Algún día me caerá una manzana en la cabeza y seré Newton.
+PGEO-61-1;Hombre Cubo: Acabas de destruir nuestro planeta
+PGEO-61-2;Hombre Cubo: La única forma que salgas de aquí es que reconstruyas todo… O a la cárcel.
+PGEO-61-3;Tu: No se preocupen, lo reconstruiré.
+PGEO-62-1;Hombre Cubo: Maravilloso. Ahora fuera de nuestro planeta. Toma tu nave y por favor no regreses nunca.
+PGEO-NPC-1;Ciudadano Geometrico: Una vez llego un fulano llamado Steve, confundió el planeta con un lugar extraño llamado Minecraft.
+PGEO-NPC-2;Ciudadano Geometrico: La geometría es el estudio de las formas de la belleza del Universo.

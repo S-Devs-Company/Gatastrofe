@@ -1,5 +1,6 @@
-using System;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Playable : MonoBehaviour
 {
@@ -8,15 +9,23 @@ public class Playable : MonoBehaviour
     public GameObject camara;
     public Animator animator;
     BoxCollider boxCollider;
+    GameObject pickedObject = null;
 
     //Atributos de estado
     public static float velocidad = 5;
-    public Boolean canPick = false;
-    private Boolean canDialog = false;
+    public bool canPick = false;
+    public bool canDialog = false;
+    public static bool canPlay = true;
+    public static bool isTalking = false;
+    public static bool canFly = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        if (canFly) {
+            GameObject nave = GameObject.Find("NaveProtagonista");
+            gameObject.transform.position = new Vector3(nave.transform.position.x-1,nave.gameObject.transform.position.y,nave.transform.position.z-1);
+        }
         animator = GetComponentInChildren<Animator>();
         boxCollider = prota.GetComponent<BoxCollider>();
         Physics.IgnoreCollision(gameObject.GetComponent<BoxCollider>(), boxCollider);
@@ -25,11 +34,18 @@ public class Playable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
-        Interact();
-
+        if (canPlay)
+        {
+            Move();
+            Interact();
+        }
+        else if (isTalking)
+        {
+            animator.SetBool("isWalking",false);
+        }
     }
 
+    // Función que controla el movimiento del jugador
     public void Move()
     {
         //Mover W + D
@@ -92,55 +108,73 @@ public class Playable : MonoBehaviour
             prota.transform.rotation = Quaternion.Euler(0, -90, 0);
             gameObject.transform.Translate(new Vector3(-velocidad * Time.deltaTime, 0, 0));
         }
+        else if (Input.GetAxis("Horizontal") > 0 || Input.GetAxis("Vertical") > 0)
+        {
+            Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+            animator.SetBool("isWalking", true);
+            prota.transform.rotation = Quaternion.LookRotation(movement);
+            transform.Translate(movement * velocidad * Time.deltaTime);
+        }
         else
         {
             animator.SetBool("isWalking", false);
         }
-        prota.transform.localPosition = new Vector3(0,1,0);
-        
+        prota.transform.localPosition = new Vector3(0, 1, 0);
+        animator.SetBool("isPicking", false);
     }
 
+    // Función que controla las interacciones del NPC
     public void Interact()
     {
-        if (Input.GetKey(KeyCode.E) && canPick)
+        if (Input.GetKey(KeyCode.E) && canPick && EventManager.ValidarEvento("INI-22-00"))
         {
             animator.SetBool("isPicking", true);
-            //agarramelo
+            Destroy(pickedObject);
+            pickedObject = null;
+            canPick = false;
 
-        }else if (Input.GetKey(KeyCode.E) && canDialog)
+        }
+        else if (Input.GetKey(KeyCode.E) && canDialog)
         {
+            isTalking = true;
+            animator.SetBool("isWalking", false);
+            NpcDialogController.SetInteraction(true);
             //Habla care tabla
+        }
+        //Abrir el mapa de la nave
+        else if (Input.GetKey(KeyCode.E) && canFly)
+        {
+            NaveProtaController.OpenMap();
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        
-        if (collision.collider.CompareTag("Pick"))
+        if (other.CompareTag("Pick"))
         {
-            Debug.Log("Colisiona");
+            pickedObject = other.gameObject;
+            canDialog = false;
             canPick = true;
-        }else if (collision.collider.CompareTag("Dialog"))
+        }
+        else if (other.CompareTag("Dialog"))
         {
             canPick = false;
             canDialog = true;
         }
-
     }
 
-    /*
-
-    private void OnCollisionExit(Collision collision)
+    private void OnTriggerExit(Collider other)
     {
-        Debug.Log("Colisionant");
         if (canPick)
         {
             canPick = false;
+            animator.SetBool("isWalking", true);
         }
         else if (canDialog)
         {
             canDialog = false;
+            NpcDialogController.SetInteraction(false);
         }
     }
-    */
+
 }

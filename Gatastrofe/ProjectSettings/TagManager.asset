@@ -4,15 +4,19 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Terreno
   - Estructura
+  - Terreno
   - Pick
   - Dialog
+  - PuertaBasurero
+  - Limites
+  - Piezas
+  - Casas
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Planeta7
   - Water
   - UI
   - 

@@ -1,13 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneManagerScript : MonoBehaviour
 {
-    static int CurrentScene = 0;
+    public static int CurrentScene = 0;
     public Animator CinematicaContexto;
     float contador = 0;
 
@@ -16,34 +16,48 @@ public class SceneManagerScript : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        if (CurrentScene == 0)
+        if (CurrentScene == SceneManager.GetSceneByName("Scenes/0. CinematicaDeContexto").buildIndex)
         {
             float AnimDuration = CinematicaContexto.GetCurrentAnimatorStateInfo(0).length;
             contador += Time.deltaTime;
-            if (CurrentScene == 0 && contador >= AnimDuration)
+            if (contador >= AnimDuration || Input.GetKeyDown(KeyCode.Q))
             {
-                nextScene();
+                CargarEscena("Scenes/1. PantallaDeInicio");
             }
         }
-
-        if (Input.GetKeyDown("space"))
+        else if (CurrentScene == SceneManager.GetSceneByName("Scenes/2.1. PlanetaTierraTutorial").buildIndex)
         {
-            nextScene();
+            if (!EventManager.ValidarEvento("INI-21-00"))
+            {
+                CargarEscena("Scenes/2.3. PlanetaTierraJugable");
+            }
         }
+        
     }
 
-    public void nextScene()
+    public static void CargarEscena(String escena)
     {
-        CurrentScene += 1;
-        SceneManager.LoadScene(CurrentScene);
+        SceneManager.LoadScene(escena);
+        CurrentScene = SceneManager.GetSceneByName(escena).buildIndex;
+    }
+
+    public static void CargarEscena(int escena)
+    {
+        SceneManager.LoadScene(escena);
+        CurrentScene = escena;
+    }
+
+    public static void CargarMinijuego()
+    {
+        if (SceneManager.GetActiveScene().name.Equals("4.1. Planeta7Jugable"))
+        {
+            CargarEscena("Scenes/4.2. MinijuegoPlaneta7");
+        }
+        else if (SceneManager.GetActiveScene().name.Equals("5.1. Planeta6Jugable"))
+        {
+            CargarEscena("Scenes/5.2. MinijuegoPlaneta6");
+        }
     }
 }
